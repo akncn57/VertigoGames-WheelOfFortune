@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4156047653855093842, guid: 4b2d70a1dc26e414297f4d6ae51b1ca1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7325712537429468904, guid: 4b2d70a1dc26e414297f4d6ae51b1ca1, type: 3}
       propertyPath: m_Name
       value: Prefab_UI_Bar_Zone
