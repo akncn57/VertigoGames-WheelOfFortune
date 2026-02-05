@@ -1,0 +1,39 @@
+﻿namespace Rewards
+{
+    public enum RewardType
+    {
+        Death,
+        GlassesAviatorEaster,
+        HelmetBaseballEaster,
+        Cash,
+        BigChest,
+        BronzeChest,
+        GoldChest,
+        SilverChest,
+        SmallChest,
+        StandardChest,
+        SuperChest,
+        Gold,
+        HelmetPumpkin,
+        KnifeBayonetEasterTime,
+        KnifeBayonetSummerVice,
+        GrenadeM26,
+        GrenadeM67,
+        HealthShotNeurostim,
+        HealthShotRegenerator,
+        Molotov,
+        ShotgunTier1,
+        MeleeTier2,
+        RifleTier2,
+        ShotgunTier3,
+        SMGTier3,
+        SniperTier3,
+        ArmorPoints,
+        KnifePoints,
+        PistolPoints,
+        RiflePoints,
+        ShotgunPoints,
+        SMGPoints,
+        SniperPoints
+    }
+}

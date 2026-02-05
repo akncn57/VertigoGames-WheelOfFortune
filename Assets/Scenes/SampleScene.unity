@@ -213,10 +213,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2736093742868631849, guid: b42f33fc5e8b6854dbd9acb1bd0a91f5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3595905353611076749, guid: b42f33fc5e8b6854dbd9acb1bd0a91f5, type: 3}
       propertyPath: m_Name
       value: Prefab_UI_Canvas_WheelGame_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3595905353611076749, guid: b42f33fc5e8b6854dbd9acb1bd0a91f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374731271381451086, guid: b42f33fc5e8b6854dbd9acb1bd0a91f5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b42f33fc5e8b6854dbd9acb1bd0a91f5, type: 3}
 --- !u!1 &477067178
