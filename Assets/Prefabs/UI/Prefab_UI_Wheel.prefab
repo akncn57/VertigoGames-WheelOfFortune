@@ -52,7 +52,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui_rect_wheel_content: {fileID: 8928953954582642207}
-  zoneData: {fileID: 0}
+  zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
+  wheelImage: {fileID: 5500041939275137644}
+  wheelIndicatorImage: {fileID: 1772211713590712788}
+  normaZoneWheelSprite: {fileID: 21300000, guid: 20de886f374e6e54393baa74d224c091, type: 3}
+  safeZoneWheelSprite: {fileID: 21300000, guid: b211d3921a845ee4cbfeb1cf007aaa37, type: 3}
+  superZoneWheelSprite: {fileID: 21300000, guid: 0f888da9a26593f49b650af87e3e7e5e, type: 3}
+  normaZoneWheelIndicatorSprite: {fileID: 21300000, guid: 9bb9163f780282a4d970f80933a359d6, type: 3}
+  safeZoneWheelIndicatorSprite: {fileID: 21300000, guid: 089d736642c952547b0535f98af3a3e4, type: 3}
+  superZoneWheelIndicatorSprite: {fileID: 21300000, guid: bf2c9b1a68639824bb041a86a2556833, type: 3}
   spinDuration: 3
   fullSpins: 5
   spinEase: 9

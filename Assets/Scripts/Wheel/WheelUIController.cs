@@ -4,6 +4,7 @@ using DG.Tweening;
 using Player;
 using Rewards;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Wheel
@@ -13,6 +14,14 @@ namespace Wheel
         [Header("References")]
         [SerializeField] private RectTransform ui_rect_wheel_content;
         [SerializeField] private ZoneDataSO zoneData;
+        [SerializeField] private Image wheelImage;
+        [SerializeField] private Image wheelIndicatorImage;
+        [SerializeField] private Sprite normaZoneWheelSprite;
+        [SerializeField] private Sprite safeZoneWheelSprite;
+        [SerializeField] private Sprite superZoneWheelSprite;
+        [SerializeField] private Sprite normaZoneWheelIndicatorSprite;
+        [SerializeField] private Sprite safeZoneWheelIndicatorSprite;
+        [SerializeField] private Sprite superZoneWheelIndicatorSprite;
         
         [Header("Spin Settings")]
         [SerializeField] private float spinDuration = 3f;
@@ -25,6 +34,11 @@ namespace Wheel
         private void Awake()
         {
             _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
+        }
+
+        private void Start()
+        {
+            SetWheel();
         }
 
         public void Spin()
@@ -45,7 +59,27 @@ namespace Wheel
                 {
                     _isSpinning = false;
                     WheelEvents.OnSpinEnded?.Invoke(selectedReward);
+                    SetWheel();
                 });
+        }
+
+        private void SetWheel()
+        {
+            switch (zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneType)
+            {
+                case ZoneType.Normal:
+                    wheelImage.sprite = normaZoneWheelSprite;
+                    wheelIndicatorImage.sprite = normaZoneWheelIndicatorSprite;
+                    break;
+                case ZoneType.Safe:
+                    wheelImage.sprite = safeZoneWheelSprite;
+                    wheelIndicatorImage.sprite = safeZoneWheelIndicatorSprite;
+                    break;
+                case ZoneType.Super:
+                    wheelImage.sprite = superZoneWheelSprite;
+                    wheelIndicatorImage.sprite = superZoneWheelIndicatorSprite;
+                    break;
+            }
         }
     }
 }
