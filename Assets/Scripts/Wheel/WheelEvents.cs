@@ -5,9 +5,9 @@ namespace Wheel
 {
     public static class WheelEvents
     {
-        public static event Action OnSpinStarted;
-        public static event Action OnSpinEnded;
-        public static event Action<int> OnZoneChanged;
-        public static event Action<RewardData> OnRewardGiven;
+        public static Action OnSpinStarted;
+        public static Action<RewardData> OnSpinEnded;
+        public static Action<int> OnZoneChanged;
+        public static Action OnRewardGiven;
     }
 }
