@@ -3,6 +3,7 @@ using DG.Tweening;
 using InOut;
 using Rewards;
 using UnityEngine;
+using UnityEngine.UI;
 using Wheel;
 
 namespace SessionRewards
@@ -44,6 +45,10 @@ namespace SessionRewards
                 // Setup initial empty state
                 targetUI.SetupItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, 0);
                 _collectedItems.Add(rewardData.RewardType, targetUI);
+                
+                // Ensure UI Layout updates immediately to get the correct world position for animation.
+                Canvas.ForceUpdateCanvases();
+                LayoutRebuilder.ForceRebuildLayoutImmediate(uiTransformItemContainer.GetComponent<RectTransform>());
             }
             else
             {
