@@ -14,6 +14,7 @@ namespace Wheel
         [Header("References")]
         [SerializeField] private RectTransform ui_rect_wheel_content;
         [SerializeField] private ZoneDataSO zoneData;
+        [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private Image wheelImage;
         [SerializeField] private Image wheelIndicatorImage;
         [SerializeField] private Sprite normaZoneWheelSprite;
@@ -22,6 +23,7 @@ namespace Wheel
         [SerializeField] private Sprite normaZoneWheelIndicatorSprite;
         [SerializeField] private Sprite safeZoneWheelIndicatorSprite;
         [SerializeField] private Sprite superZoneWheelIndicatorSprite;
+        [SerializeField] private List<WheelSlotUI> wheelSlots = new List<WheelSlotUI>();
         
         [Header("Spin Settings")]
         [SerializeField] private float spinDuration = 3f;
@@ -30,15 +32,12 @@ namespace Wheel
 
         private bool _isSpinning = false;
         private List<RewardData> _currentZoneRewards = new List<RewardData>();
-
-        private void Awake()
-        {
-            _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
-        }
-
+        
         private void Start()
         {
+            _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
             SetWheel();
+            SetWheelZoneRewardUI();
         }
 
         public void Spin()
@@ -53,13 +52,15 @@ namespace Wheel
 
             
             ui_rect_wheel_content.localRotation = Quaternion.Euler(0, 0, 0);
-            ui_rect_wheel_content.DORotate(new Vector3(0, 0, -targetAngle), spinDuration, RotateMode.FastBeyond360)
+            ui_rect_wheel_content.DORotate(new Vector3(0, 0, targetAngle), spinDuration, RotateMode.FastBeyond360)
                 .SetEase(spinEase)
                 .OnComplete(() => 
                 {
                     _isSpinning = false;
                     WheelEvents.OnSpinEnded?.Invoke(selectedReward);
+                    _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
                     SetWheel();
+                    SetWheelZoneRewardUI();
                 });
         }
 
@@ -79,6 +80,17 @@ namespace Wheel
                     wheelImage.sprite = superZoneWheelSprite;
                     wheelIndicatorImage.sprite = superZoneWheelIndicatorSprite;
                     break;
+            }
+        }
+
+        private void SetWheelZoneRewardUI()
+        {
+            for (var i = 0; i < wheelSlots.Count; i++)
+            {
+                wheelSlots[i].SetupSlot(
+                    rewardCollection.GetRewardByType(zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardType).icon,
+                    zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardCount
+                    );
             }
         }
     }
