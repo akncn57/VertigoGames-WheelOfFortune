@@ -39,6 +39,9 @@ namespace Player
             }
 
             Data.AddReward(reward);
+            
+            WheelEvents.OnRewardGiven?.Invoke();
+            
             Data.CurrentZoneIndex++;
             
             Debug.Log($"<color=green><b>[REWARD RECEIVED]</b></color> Type: {reward.RewardType}, Amount: {reward.RewardCount} | Current Zone: {Data.CurrentZoneIndex}");

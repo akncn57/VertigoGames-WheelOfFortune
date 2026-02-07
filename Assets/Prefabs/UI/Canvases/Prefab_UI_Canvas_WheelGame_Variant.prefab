@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553331736388992790, guid: 71439fe38583dba4c80c91df43bb0a7b, type: 3}
       propertyPath: m_Name
-      value: Prefab_UI_Current_Rewards
+      value: Prefab_UI_Session_Rewards
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71439fe38583dba4c80c91df43bb0a7b, type: 3}

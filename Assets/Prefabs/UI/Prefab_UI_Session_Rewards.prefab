@@ -237,8 +237,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2711894879599904530}
+  - component: {fileID: 1772541939894649847}
   m_Layer: 5
-  m_Name: Prefab_UI_Current_Rewards
+  m_Name: Prefab_UI_Session_Rewards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,6 +269,21 @@ RectTransform:
   m_AnchoredPosition: {x: 126, y: 0}
   m_SizeDelta: {x: 800, y: 1575}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1772541939894649847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553331736388992790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbac46d3bb14417b643a6b970f8c8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
+  uiPrefabRewardItem: {fileID: 5162735857813371069, guid: 3fbde452c27dd0d46985025897671315, type: 3}
+  uiTransformItemContainer: {fileID: 2179329776258288096}
 --- !u!1 &6838548606703894994
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2179329776258288096}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
