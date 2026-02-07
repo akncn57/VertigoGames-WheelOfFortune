@@ -42,8 +42,6 @@ namespace Player
             Data.CurrentZoneIndex++;
             
             Debug.Log($"<color=green><b>[REWARD RECEIVED]</b></color> Type: {reward.RewardType}, Amount: {reward.RewardCount} | Current Zone: {Data.CurrentZoneIndex}");
-            
-            WheelEvents.OnZoneChanged?.Invoke(Data.CurrentZoneIndex);
         }
 
         private void HandleGameOver()

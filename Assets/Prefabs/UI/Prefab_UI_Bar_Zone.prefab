@@ -497,14 +497,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
-  zoneTextPrefab: {fileID: 7757701411973943304, guid: 8219555f70f79c6418eb6c35ee77bec8, type: 3}
-  zoneContent: {fileID: 4156047653855093842}
-  zoneNumberInitPoint: {fileID: 4156047653855093842}
-  zoneNumberBackground: {fileID: 7145550660374574264}
-  zoneNumberNormalBackgroundSprite: {fileID: 21300000, guid: 9289d478fb406af4c951b2707d2c7e82, type: 3}
-  zoneNumberSafeBackgroundSprite: {fileID: 21300000, guid: 1c3f049ae5c9e754d800e88318919b59, type: 3}
-  zoneNumberSuperBackgroundSprite: {fileID: 21300000, guid: 1c3f049ae5c9e754d800e88318919b59, type: 3}
-  itemWidth: 166
+  uiTextZoneNumberValuePrefab: {fileID: 7757701411973943304, guid: 8219555f70f79c6418eb6c35ee77bec8, type: 3}
+  uiRectZoneContainer: {fileID: 4156047653855093842}
+  uiImageZoneBackgroundValue: {fileID: 7145550660374574264}
   spacing: 16
   animationDuration: 1
   animationEase: 27
+  spriteZoneNormal: {fileID: 21300000, guid: 9289d478fb406af4c951b2707d2c7e82, type: 3}
+  spriteZoneSafe: {fileID: 21300000, guid: 1c3f049ae5c9e754d800e88318919b59, type: 3}
+  spriteZoneSuper: {fileID: 21300000, guid: 1c3f049ae5c9e754d800e88318919b59, type: 3}
+  colorZoneNormal: {r: 1, g: 1, b: 1, a: 1}
+  colorZoneSafe: {r: 0, g: 1, b: 0, a: 1}
+  colorZoneSuper: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

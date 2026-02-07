@@ -92,6 +92,7 @@ namespace Wheel
         private void UpdateZoneData()
         {
             _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
+            WheelEvents.OnZoneChanged?.Invoke(GameManager.Instance.Data.CurrentZoneIndex);
         }
 
         private void RefreshWheelVisuals()
