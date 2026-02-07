@@ -453,6 +453,14 @@ PrefabInstance:
       propertyPath: spinButton
       value: 
       objectReference: {fileID: 6486579449568677651}
+    - target: {fileID: 3940657755264377769, guid: c0398d7769477f24e8780c4daaa2d4c9, type: 3}
+      propertyPath: safeZoneDescriptionText
+      value: 
+      objectReference: {fileID: 7117916184908669684}
+    - target: {fileID: 3940657755264377769, guid: c0398d7769477f24e8780c4daaa2d4c9, type: 3}
+      propertyPath: superZoneDescriptionText
+      value: 
+      objectReference: {fileID: 1471005019910065481}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0398d7769477f24e8780c4daaa2d4c9, type: 3}
 --- !u!1001 &2992846888495395410

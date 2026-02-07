@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Player;
 using Rewards;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zone;
@@ -19,6 +20,8 @@ namespace Wheel
         [SerializeField] private Image wheelImage;
         [SerializeField] private Image wheelIndicatorImage;
         [SerializeField] private Button spinButton;
+        [SerializeField] private TMP_Text safeZoneDescriptionText;
+        [SerializeField] private TMP_Text superZoneDescriptionText;
         
         [Header("Zone Sprites")]
         [SerializeField] private Sprite normaZoneWheelSprite;
@@ -61,6 +64,7 @@ namespace Wheel
         private void Start()
         {
             PrepareWheel();
+            UpdateZoneDescriptions();
         }
 
         private void PrepareWheel()
@@ -134,11 +138,44 @@ namespace Wheel
             // Prepare wheel UI after spin.
             UpdateZoneData();
             PrepareWheel();
+
+            // Update description texts.
+            UpdateZoneDescriptions();
         }
 
         private void EnableSpinButton(RewardData selectedReward)
         {
             spinButton.interactable = true;
+        }
+        
+        private void UpdateZoneDescriptions()
+        {
+            var currentIndex = GameManager.Instance.Data.CurrentZoneIndex;
+            var nextSafe = -1;
+            var nextSuper = -1;
+
+            // Search for the upcoming special zones starting from the next index
+            for (var i = currentIndex + 1; i < zoneData.ZoneItems.Count; i++)
+            {
+                // Store user-friendly zone number (index + 1)
+                if (nextSafe == -1 && zoneData.ZoneItems[i].ZoneType == ZoneType.Safe)
+                    nextSafe = i + 1;
+    
+                if (nextSuper == -1 && zoneData.ZoneItems[i].ZoneType == ZoneType.Super)
+                    nextSuper = i + 1;
+
+                // Stop searching once both types are found for optimization
+                if (nextSafe != -1 && nextSuper != -1) break;
+            }
+
+            // Update UI labels or show fallback text if no more special zones exist
+            safeZoneDescriptionText.text = nextSafe != -1 
+                ? $"Next Safe Zone: {nextSafe}" 
+                : "No more Safe Zones";
+
+            superZoneDescriptionText.text = nextSuper != -1 
+                ? $"Next Super Zone: {nextSuper}" 
+                : "No more Super Zones";
         }
     }
 }
