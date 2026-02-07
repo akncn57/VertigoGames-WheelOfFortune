@@ -1,4 +1,4 @@
-﻿namespace Wheel
+﻿namespace Zone
 {
     public enum ZoneType
     {

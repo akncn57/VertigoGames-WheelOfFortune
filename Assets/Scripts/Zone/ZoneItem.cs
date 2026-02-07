@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Rewards;
+using Wheel;
 
-namespace Wheel
+namespace Zone
 {
     [Serializable]
     public class ZoneItem

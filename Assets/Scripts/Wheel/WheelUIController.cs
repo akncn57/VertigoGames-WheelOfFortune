@@ -5,6 +5,7 @@ using Player;
 using Rewards;
 using UnityEngine;
 using UnityEngine.UI;
+using Zone;
 using Random = UnityEngine.Random;
 
 namespace Wheel

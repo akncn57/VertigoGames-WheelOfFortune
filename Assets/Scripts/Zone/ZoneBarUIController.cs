@@ -2,8 +2,9 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Wheel;
 
-namespace Wheel
+namespace Zone
 {
     public class ZoneBarUIController : MonoBehaviour
     {
