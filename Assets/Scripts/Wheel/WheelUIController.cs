@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DG.Tweening;
 using Player;
 using Rewards;
@@ -30,41 +29,39 @@ namespace Wheel
         [SerializeField] private int fullSpins = 5;
         [SerializeField] private Ease spinEase = Ease.OutQuart;
 
-        private bool _isSpinning = false;
         private List<RewardData> _currentZoneRewards = new List<RewardData>();
         
         private void Start()
         {
-            _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
-            SetWheel();
-            SetWheelZoneRewardUI();
+            PrepareWheel();
+        }
+
+        private void PrepareWheel()
+        {
+            UpdateZoneData();
+            RefreshWheelVisuals();
         }
 
         public void Spin()
         {
-            if (_isSpinning) return;
-            
-            _isSpinning = true;
-            
             var randomIndex = Random.Range(0, _currentZoneRewards.Count);
             var selectedReward = _currentZoneRewards[randomIndex];
-            var targetAngle = (fullSpins * 360) + (randomIndex * 45);
-
+            var targetAngle = (fullSpins * 360) + (randomIndex * 360 / wheelSlots.Count);
+            
+            WheelEvents.OnSpinStarted(selectedReward);
             
             ui_rect_wheel_content.localRotation = Quaternion.Euler(0, 0, 0);
             ui_rect_wheel_content.DORotate(new Vector3(0, 0, targetAngle), spinDuration, RotateMode.FastBeyond360)
                 .SetEase(spinEase)
-                .OnComplete(() => 
-                {
-                    _isSpinning = false;
-                    WheelEvents.OnSpinEnded?.Invoke(selectedReward);
-                    _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
-                    SetWheel();
-                    SetWheelZoneRewardUI();
-                });
+                .OnComplete(() => OnSpinCompleted(selectedReward));
         }
 
-        private void SetWheel()
+        private void UpdateZoneData()
+        {
+            _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
+        }
+
+        private void RefreshWheelVisuals()
         {
             switch (zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneType)
             {
@@ -81,17 +78,21 @@ namespace Wheel
                     wheelIndicatorImage.sprite = superZoneWheelIndicatorSprite;
                     break;
             }
-        }
-
-        private void SetWheelZoneRewardUI()
-        {
+            
             for (var i = 0; i < wheelSlots.Count; i++)
             {
                 wheelSlots[i].SetupSlot(
                     rewardCollection.GetRewardByType(zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardType).icon,
                     zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardCount
-                    );
+                );
             }
+        }
+        
+        private void OnSpinCompleted(RewardData selectedReward)
+        {
+            WheelEvents.OnSpinEnded?.Invoke(selectedReward);
+            UpdateZoneData();
+            PrepareWheel();
         }
     }
 }

@@ -22,12 +22,12 @@ namespace Player
 
         private void OnEnable()
         {
-            WheelEvents.OnSpinEnded += HandleRewardEarned;
+            WheelEvents.OnSpinStarted += HandleRewardEarned;
         }
 
         private void OnDisable()
         {
-            WheelEvents.OnSpinEnded -= HandleRewardEarned;
+            WheelEvents.OnSpinStarted -= HandleRewardEarned;
         }
 
         private void HandleRewardEarned(RewardData reward)
