@@ -8,6 +8,7 @@ namespace Wheel
         public static Action<RewardData> OnSpinStarted;
         public static Action<RewardData> OnSpinEnded;
         public static Action<int> OnZoneChanged;
+        public static Action OnInOutEnded;
         public static Action OnRewardGiven;
     }
 }

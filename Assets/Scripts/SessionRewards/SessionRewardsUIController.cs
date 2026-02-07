@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
+using InOut;
 using Rewards;
 using UnityEngine;
 using Wheel;
@@ -11,6 +13,7 @@ namespace SessionRewards
         [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private SessionRewardItemUI uiPrefabRewardItem;
         [SerializeField] private Transform uiTransformItemContainer;
+        [SerializeField] private Transform inOutStartPoint;
 
         private readonly Dictionary<RewardType, SessionRewardItemUI> _collectedItems = new();
         private readonly Dictionary<RewardType, int> _sessionRewards = new();
@@ -27,30 +30,49 @@ namespace SessionRewards
 
         private void HandleRewardCollected(RewardData rewardData)
         {
-            // If session rewards contains collected reward;
-            if (_sessionRewards.ContainsKey(rewardData.RewardType))
+            SessionRewardItemUI targetUI;
+            var isFirstTime = !_sessionRewards.ContainsKey(rewardData.RewardType);
+
+            if (isFirstTime)
             {
-                // Change session reward value.
-                _sessionRewards[rewardData.RewardType] += rewardData.RewardCount;
-                
-                var uiItem = _collectedItems[rewardData.RewardType];
-                
-                uiItem.SetupItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, _sessionRewards[rewardData.RewardType]);
+                // Initialize data and reserve UI slot
+                _sessionRewards.Add(rewardData.RewardType, 0);
+        
+                targetUI = Instantiate(uiPrefabRewardItem, uiTransformItemContainer);
+                targetUI.name = $"ui_item_{rewardData.RewardType}_value";
+        
+                // Setup initial empty state
+                targetUI.SetupItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, 0);
+                _collectedItems.Add(rewardData.RewardType, targetUI);
             }
             else
             {
-                // Add collected reward in session rewards.
-                _sessionRewards.Add(rewardData.RewardType, rewardData.RewardCount);
-                
-                // Create item prefab in container.
-                var newItem = Instantiate(uiPrefabRewardItem, uiTransformItemContainer);
-                
-                // Setup item UI.
-                newItem.SetupItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
-                
-                // Add collected reward in collected rewards.
-                _collectedItems.Add(rewardData.RewardType, newItem);
+                targetUI = _collectedItems[rewardData.RewardType];
             }
+
+            // Start transfer animation
+            var startPos = inOutStartPoint; 
+            var targetPos = targetUI.transform.position;
+
+            InOutController.Instance.PlayInOut(
+                rewardData,
+                startPos.position,
+                targetPos,
+                () => 
+                {
+                    // Update data on arrival
+                    _sessionRewards[rewardData.RewardType] += rewardData.RewardCount;
+            
+                    // Refresh UI with new amount
+                    targetUI.SetupItem(
+                        rewardCollection.GetRewardByType(rewardData.RewardType).icon, 
+                        _sessionRewards[rewardData.RewardType]
+                    );
+
+                    // Play feedback punch effect
+                    targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
+                }
+            );
         }
     }
 }
