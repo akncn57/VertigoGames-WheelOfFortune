@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using Collections;
 using Rewards;
 
 namespace Player
@@ -7,22 +6,17 @@ namespace Player
     public class PlayerData
     {
         public int CurrentZoneIndex = 0;
-        public List<RewardData> CollectedRewards = new List<RewardData>();
+        public SerializedDictionary<RewardType, int> CollectedRewards = new SerializedDictionary<RewardType, int>();
 
         public void AddReward(RewardData reward)
         {
-            var existingReward = CollectedRewards.FirstOrDefault(r => r.RewardType == reward.RewardType);
-
-            if (existingReward != null)
+            if (CollectedRewards.ContainsKey(reward.RewardType))
             {
-                existingReward.RewardCount += reward.RewardCount;
+                CollectedRewards[reward.RewardType] += reward.RewardCount;
             }
             else
             {
-                CollectedRewards.Add(new RewardData { 
-                    RewardType = reward.RewardType, 
-                    RewardCount = reward.RewardCount,
-                });
+                CollectedRewards.Add(reward.RewardType, reward.RewardCount);
             }
         }
     }
