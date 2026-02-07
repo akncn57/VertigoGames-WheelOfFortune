@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Player;
 using Rewards;
@@ -11,17 +12,22 @@ namespace Wheel
     public class WheelUIController: MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private RectTransform ui_rect_wheel_content;
+        [SerializeField] private RectTransform wheelContent;
         [SerializeField] private ZoneDataSO zoneData;
         [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private Image wheelImage;
         [SerializeField] private Image wheelIndicatorImage;
+        [SerializeField] private Button spinButton;
+        
+        [Header("Zone Sprites")]
         [SerializeField] private Sprite normaZoneWheelSprite;
         [SerializeField] private Sprite safeZoneWheelSprite;
         [SerializeField] private Sprite superZoneWheelSprite;
         [SerializeField] private Sprite normaZoneWheelIndicatorSprite;
         [SerializeField] private Sprite safeZoneWheelIndicatorSprite;
         [SerializeField] private Sprite superZoneWheelIndicatorSprite;
+        
+        [Header("Zone Slots")]
         [SerializeField] private List<WheelSlotUI> wheelSlots = new List<WheelSlotUI>();
         
         [Header("Spin Settings")]
@@ -30,7 +36,27 @@ namespace Wheel
         [SerializeField] private Ease spinEase = Ease.OutQuart;
 
         private List<RewardData> _currentZoneRewards = new List<RewardData>();
-        
+
+        private void OnValidate()
+        {
+            if (!spinButton)
+            {
+                spinButton = GetComponentInChildren<Button>(true);
+            }
+        }
+
+        private void OnEnable()
+        {
+            WheelEvents.OnSpinEnded += EnableSpinButton;
+            spinButton.onClick.AddListener(Spin);
+        }
+
+        private void OnDisable()
+        {
+            WheelEvents.OnSpinEnded -= EnableSpinButton;
+            spinButton.onClick.RemoveAllListeners();
+        }
+
         private void Start()
         {
             PrepareWheel();
@@ -42,16 +68,23 @@ namespace Wheel
             RefreshWheelVisuals();
         }
 
-        public void Spin()
+        private void Spin()
         {
+            // First, close spin button interactable for anti-spam.
+            spinButton.interactable = false;
+            
+            // Get random reward.
             var randomIndex = Random.Range(0, _currentZoneRewards.Count);
             var selectedReward = _currentZoneRewards[randomIndex];
             var targetAngle = (fullSpins * 360) + (randomIndex * 360 / wheelSlots.Count);
             
             WheelEvents.OnSpinStarted(selectedReward);
             
-            ui_rect_wheel_content.localRotation = Quaternion.Euler(0, 0, 0);
-            ui_rect_wheel_content.DORotate(new Vector3(0, 0, targetAngle), spinDuration, RotateMode.FastBeyond360)
+            // Reset wheel rotation.
+            wheelContent.localRotation = Quaternion.Euler(0, 0, 0);
+            
+            // Spin wheel.
+            wheelContent.DORotate(new Vector3(0, 0, targetAngle), spinDuration, RotateMode.FastBeyond360)
                 .SetEase(spinEase)
                 .OnComplete(() => OnSpinCompleted(selectedReward));
         }
@@ -63,6 +96,7 @@ namespace Wheel
 
         private void RefreshWheelVisuals()
         {
+            // Set wheel UI.
             switch (zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneType)
             {
                 case ZoneType.Normal:
@@ -77,8 +111,11 @@ namespace Wheel
                     wheelImage.sprite = superZoneWheelSprite;
                     wheelIndicatorImage.sprite = superZoneWheelIndicatorSprite;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             
+            // Set wheel reward slots UI.
             for (var i = 0; i < wheelSlots.Count; i++)
             {
                 wheelSlots[i].SetupSlot(
@@ -91,8 +128,15 @@ namespace Wheel
         private void OnSpinCompleted(RewardData selectedReward)
         {
             WheelEvents.OnSpinEnded?.Invoke(selectedReward);
+            
+            // Prepare wheel UI after spin.
             UpdateZoneData();
             PrepareWheel();
+        }
+
+        private void EnableSpinButton(RewardData selectedReward)
+        {
+            spinButton.interactable = true;
         }
     }
 }

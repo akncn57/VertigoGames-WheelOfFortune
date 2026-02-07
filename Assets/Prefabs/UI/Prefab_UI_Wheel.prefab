@@ -51,11 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e088c71d217f4bb7ae3a57e0b842a70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui_rect_wheel_content: {fileID: 8928953954582642207}
+  wheelContent: {fileID: 8928953954582642207}
   zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
   rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
   wheelImage: {fileID: 5500041939275137644}
   wheelIndicatorImage: {fileID: 1772211713590712788}
+  spinButton: {fileID: 0}
   normaZoneWheelSprite: {fileID: 21300000, guid: 20de886f374e6e54393baa74d224c091, type: 3}
   safeZoneWheelSprite: {fileID: 21300000, guid: b211d3921a845ee4cbfeb1cf007aaa37, type: 3}
   superZoneWheelSprite: {fileID: 21300000, guid: 0f888da9a26593f49b650af87e3e7e5e, type: 3}
