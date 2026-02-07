@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992826f9393f4f708817c5f9cb2c0c3b, type: 3}
   m_Name: Scriptableobject_RewardItem_KnifeBayonetEasterTime
   m_EditorClassIdentifier: 
-  type: 1
-  rewardName: Glasses Aviator Easter
-  icon: {fileID: 21300000, guid: 847cef3210d8dd2499c409cae4e41269, type: 3}
+  type: 13
+  rewardName: Knife Bayonet Easter Time
+  icon: {fileID: 21300000, guid: 48a4e6e98a8e7314facd977ac37e748a, type: 3}
   inOutPrefab: {fileID: 0}

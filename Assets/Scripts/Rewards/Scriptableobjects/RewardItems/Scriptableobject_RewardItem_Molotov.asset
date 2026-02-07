@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992826f9393f4f708817c5f9cb2c0c3b, type: 3}
   m_Name: Scriptableobject_RewardItem_Molotov
   m_EditorClassIdentifier: 
-  type: 16
+  type: 19
   rewardName: Molotov
   icon: {fileID: 21300000, guid: 38426083547ee514190cfd0272845ef3, type: 3}
   inOutPrefab: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992826f9393f4f708817c5f9cb2c0c3b, type: 3}
   m_Name: Scriptableobject_RewardItem_HelmetPumpkin
   m_EditorClassIdentifier: 
-  type: 9
+  type: 12
   rewardName: Helmet Pumpkin
   icon: {fileID: 21300000, guid: 1d9015295a66c6d4596d975d56f266df, type: 3}
   inOutPrefab: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992826f9393f4f708817c5f9cb2c0c3b, type: 3}
   m_Name: Scriptableobject_RewardItem_GrenadeM67
   m_EditorClassIdentifier: 
-  type: 13
+  type: 16
   rewardName: Grenade M67
   icon: {fileID: 21300000, guid: e5e0dad8235864d42af520a6987d6c5d, type: 3}
   inOutPrefab: {fileID: 0}

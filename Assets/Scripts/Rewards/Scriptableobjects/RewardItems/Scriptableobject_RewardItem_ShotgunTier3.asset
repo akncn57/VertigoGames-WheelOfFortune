@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992826f9393f4f708817c5f9cb2c0c3b, type: 3}
   m_Name: Scriptableobject_RewardItem_ShotgunTier3
   m_EditorClassIdentifier: 
-  type: 20
+  type: 23
   rewardName: Shotgun Tier 3
   icon: {fileID: 21300000, guid: f558ddccbc1413c4e9bbb4d18193dbf5, type: 3}
   inOutPrefab: {fileID: 0}

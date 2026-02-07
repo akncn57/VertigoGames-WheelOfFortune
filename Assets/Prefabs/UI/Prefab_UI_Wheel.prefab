@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui_rect_wheel_content: {fileID: 8928953954582642207}
   zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
+  rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
   wheelImage: {fileID: 5500041939275137644}
   wheelIndicatorImage: {fileID: 1772211713590712788}
   normaZoneWheelSprite: {fileID: 21300000, guid: 20de886f374e6e54393baa74d224c091, type: 3}
@@ -61,6 +62,15 @@ MonoBehaviour:
   normaZoneWheelIndicatorSprite: {fileID: 21300000, guid: 9bb9163f780282a4d970f80933a359d6, type: 3}
   safeZoneWheelIndicatorSprite: {fileID: 21300000, guid: 089d736642c952547b0535f98af3a3e4, type: 3}
   superZoneWheelIndicatorSprite: {fileID: 21300000, guid: bf2c9b1a68639824bb041a86a2556833, type: 3}
+  wheelSlots:
+  - {fileID: 341741775951614927}
+  - {fileID: 8269719995019063225}
+  - {fileID: 3721820167154380201}
+  - {fileID: 8657504345927088463}
+  - {fileID: 5422030748802671254}
+  - {fileID: 8269412921603619883}
+  - {fileID: 1249224103966197338}
+  - {fileID: 6178349817931961044}
   spinDuration: 3
   fullSpins: 5
   spinEase: 9
@@ -254,6 +264,7 @@ GameObject:
   - component: {fileID: 2469654060641283313}
   - component: {fileID: 5999448488872877891}
   - component: {fileID: 6060813043274025712}
+  - component: {fileID: 8269412921603619883}
   m_Layer: 5
   m_Name: Image_Reward_06
   m_TagString: Untagged
@@ -320,6 +331,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8269412921603619883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562700854996897937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 6060813043274025712}
+  amountText: {fileID: 9092942091893461469}
 --- !u!1 &4023009358123753534
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +356,7 @@ GameObject:
   - component: {fileID: 6685931554153192234}
   - component: {fileID: 6661305117608214441}
   - component: {fileID: 7807693341054376367}
+  - component: {fileID: 8657504345927088463}
   m_Layer: 5
   m_Name: Image_Reward_04
   m_TagString: Untagged
@@ -397,6 +423,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8657504345927088463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023009358123753534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 7807693341054376367}
+  amountText: {fileID: 6829085999983443223}
 --- !u!1 &4292567384012754404
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +583,7 @@ GameObject:
   - component: {fileID: 937822166258982427}
   - component: {fileID: 2515173400487311951}
   - component: {fileID: 5586530137900678109}
+  - component: {fileID: 5422030748802671254}
   m_Layer: 5
   m_Name: Image_Reward_05
   m_TagString: Untagged
@@ -609,6 +650,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5422030748802671254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552217904745036244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 5586530137900678109}
+  amountText: {fileID: 181722558227696309}
 --- !u!1 &4909666859873355459
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +810,7 @@ GameObject:
   - component: {fileID: 8933504843274587870}
   - component: {fileID: 7212666379680578283}
   - component: {fileID: 7814495314726451972}
+  - component: {fileID: 3721820167154380201}
   m_Layer: 5
   m_Name: Image_Reward_03
   m_TagString: Untagged
@@ -821,6 +877,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3721820167154380201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354301670409262232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 7814495314726451972}
+  amountText: {fileID: 4714653002624636911}
 --- !u!1 &5505954779157994864
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1037,7 @@ GameObject:
   - component: {fileID: 4714840789933232479}
   - component: {fileID: 3106250964267630025}
   - component: {fileID: 896344605436064044}
+  - component: {fileID: 1249224103966197338}
   m_Layer: 5
   m_Name: Image_Reward_07
   m_TagString: Untagged
@@ -1033,6 +1104,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1249224103966197338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614722648051656774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 896344605436064044}
+  amountText: {fileID: 3322799330519995188}
 --- !u!1 &6666268829760224488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1206,7 @@ GameObject:
   - component: {fileID: 623892828325828181}
   - component: {fileID: 608574948703877923}
   - component: {fileID: 3086146987946337307}
+  - component: {fileID: 341741775951614927}
   m_Layer: 5
   m_Name: Image_Reward_01
   m_TagString: Untagged
@@ -1187,6 +1273,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &341741775951614927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858969154980708658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 3086146987946337307}
+  amountText: {fileID: 8732407579553007336}
 --- !u!1 &7038705187732056582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1374,7 @@ GameObject:
   - component: {fileID: 6069992073479454910}
   - component: {fileID: 7404607248879535905}
   - component: {fileID: 1416079398703660080}
+  - component: {fileID: 8269719995019063225}
   m_Layer: 5
   m_Name: Image_Reward_02
   m_TagString: Untagged
@@ -1340,6 +1441,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8269719995019063225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449617936969027928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 1416079398703660080}
+  amountText: {fileID: 2577952275492998242}
 --- !u!1 &7545902057532625989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +2006,7 @@ GameObject:
   - component: {fileID: 1705613600371001151}
   - component: {fileID: 2392371652678622044}
   - component: {fileID: 7570667052651449231}
+  - component: {fileID: 6178349817931961044}
   m_Layer: 5
   m_Name: Image_Reward_08
   m_TagString: Untagged
@@ -1957,3 +2073,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6178349817931961044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104990718617355225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardIcon: {fileID: 7570667052651449231}
+  amountText: {fileID: 2697036021523413919}
