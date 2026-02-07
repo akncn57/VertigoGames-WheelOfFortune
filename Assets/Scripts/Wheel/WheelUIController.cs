@@ -51,13 +51,13 @@ namespace Wheel
 
         private void OnEnable()
         {
-            WheelEvents.OnSpinEnded += EnableSpinButton;
+            WheelEvents.OnInOutEnded += EnableSpinButton;
             spinButton.onClick.AddListener(Spin);
         }
 
         private void OnDisable()
         {
-            WheelEvents.OnSpinEnded -= EnableSpinButton;
+            WheelEvents.OnInOutEnded -= EnableSpinButton;
             spinButton.onClick.RemoveAllListeners();
         }
 
@@ -143,7 +143,7 @@ namespace Wheel
             UpdateZoneDescriptions();
         }
 
-        private void EnableSpinButton(RewardData selectedReward)
+        private void EnableSpinButton()
         {
             spinButton.interactable = true;
         }

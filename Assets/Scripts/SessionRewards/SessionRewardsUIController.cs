@@ -76,6 +76,8 @@ namespace SessionRewards
 
                     // Play feedback punch effect
                     targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
+                    
+                    WheelEvents.OnInOutEnded?.Invoke();
                 }
             );
         }
