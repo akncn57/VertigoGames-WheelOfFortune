@@ -22,6 +22,7 @@ namespace Wheel
         [SerializeField] private Button spinButton;
         [SerializeField] private TMP_Text safeZoneDescriptionText;
         [SerializeField] private TMP_Text superZoneDescriptionText;
+        [SerializeField] private GameObject gameLosePanel;
         
         [Header("Zone Sprites")]
         [SerializeField] private Sprite normaZoneWheelSprite;
@@ -52,12 +53,14 @@ namespace Wheel
         private void OnEnable()
         {
             WheelEvents.OnInOutEnded += EnableSpinButton;
+            WheelEvents.OnGameLose += EnableGameLosePanel;
             spinButton.onClick.AddListener(Spin);
         }
 
         private void OnDisable()
         {
             WheelEvents.OnInOutEnded -= EnableSpinButton;
+            WheelEvents.OnGameLose -= EnableGameLosePanel;
             spinButton.onClick.RemoveAllListeners();
         }
 
@@ -176,6 +179,11 @@ namespace Wheel
             superZoneDescriptionText.text = nextSuper != -1 
                 ? $"Next Super Zone: {nextSuper}" 
                 : "No more Super Zones";
+        }
+
+        private void EnableGameLosePanel()
+        {
+            gameLosePanel.SetActive(true);
         }
     }
 }

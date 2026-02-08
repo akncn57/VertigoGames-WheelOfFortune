@@ -10,5 +10,6 @@ namespace Wheel
         public static Action<int> OnZoneChanged;
         public static Action OnInOutEnded;
         public static Action OnRewardGiven;
+        public static Action OnGameLose;
     }
 }
