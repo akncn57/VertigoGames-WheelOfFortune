@@ -12,6 +12,13 @@ namespace MainMenu
         [SerializeField] private TMP_Text cashValueText;
         [SerializeField] private Button playGameButton;
         [SerializeField] private Button exitGameButton;
+        [Header("Test")]
+        [SerializeField] private Button testButton;
+        [SerializeField] private int requiredClicks = 3;
+        [SerializeField] private float resetTime = 1f;
+        
+        private int _clickCount;
+        private float _lastClickTime;
         
         private void OnValidate()
         {
@@ -19,6 +26,7 @@ namespace MainMenu
             {
                 playGameButton = GetComponentInChildren<Button>(true);
                 exitGameButton = GetComponentInChildren<Button>(true);
+                testButton = GetComponentInChildren<Button>(true);
             }
         }
 
@@ -28,6 +36,7 @@ namespace MainMenu
             
             playGameButton.onClick.AddListener(PlayGame);
             exitGameButton.onClick.AddListener(ExitGame);
+            testButton.onClick.AddListener(OnSecretTriggerClicked);
             InitializeCashValue();
         }
         
@@ -60,6 +69,26 @@ namespace MainMenu
             if (type != RewardType.Cash) return;
             
             cashValueText.text = newAmount.ToString();
+        }
+        
+        private void OnSecretTriggerClicked()
+        {
+            var currentTime = Time.time;
+
+            if (currentTime - _lastClickTime > resetTime)
+            {
+                _clickCount = 0;
+            }
+
+            _clickCount++;
+            _lastClickTime = currentTime;
+
+            if (_clickCount >= requiredClicks)
+            {
+                _clickCount = 0;
+                HUDManager.Instance.ShowTestCanvas();
+                HUDManager.Instance.HideMainMenu();
+            }
         }
     }
 }

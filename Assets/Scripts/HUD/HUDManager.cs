@@ -6,6 +6,7 @@ namespace HUD
     {
         [SerializeField] private GameObject mainMenuCanvas;
         [SerializeField] private GameObject wheelGameCanvas;
+        [SerializeField] private GameObject testCanvas;
         
         public static HUDManager Instance {get; private set;}
 
@@ -38,6 +39,16 @@ namespace HUD
         public void HideWheelGame()
         {
             wheelGameCanvas.SetActive(false);
+        }
+
+        public void ShowTestCanvas()
+        {
+            testCanvas.SetActive(true);
+        }
+
+        public void HideTestCanvas()
+        {
+            testCanvas.SetActive(false);
         }
     }
 }

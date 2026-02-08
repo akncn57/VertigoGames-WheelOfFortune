@@ -13,6 +13,7 @@ namespace Player
         public int CurrentZoneIndex = 0;
         public List<RewardData> CollectedRewards = new();
         
+        public Action<int> OnZoneIndexChanged;
         public Action<RewardType, int> OnRewardChanged;
         
         private static string SavePath => Path.Combine(Application.persistentDataPath, "player_data.json");
@@ -32,6 +33,12 @@ namespace Player
             }
 
             return new PlayerData();
+        }
+
+        public void SetZoneIndex(int zoneIndex)
+        {
+            CurrentZoneIndex = zoneIndex;
+            OnZoneIndexChanged?.Invoke(CurrentZoneIndex);
         }
         
         public void AddReward(RewardData reward)

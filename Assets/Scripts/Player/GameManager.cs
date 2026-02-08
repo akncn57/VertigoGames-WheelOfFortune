@@ -36,7 +36,7 @@ namespace Player
 
         private void HandleRewardEarned(RewardData reward)
         {
-            Data.CurrentZoneIndex++;
+            Data.SetZoneIndex(Data.CurrentZoneIndex + 1);
             
             if (reward.RewardType == RewardType.Death) return;
 
