@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   returnMainMenuButton: {fileID: 3708241846987944736}
   continueButton: {fileID: 4082670925609495909}
+  cashValueText: {fileID: 797614642665559735}
 --- !u!1 &6969017612428412655
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +813,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54503b62fc743f248912bc68238a8ac0, type: 3}
+--- !u!114 &797614642665559735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8135965195452198095, guid: 54503b62fc743f248912bc68238a8ac0, type: 3}
+  m_PrefabInstance: {fileID: 8933298293226977912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8017772370879225222 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1494537612765374462, guid: 54503b62fc743f248912bc68238a8ac0, type: 3}

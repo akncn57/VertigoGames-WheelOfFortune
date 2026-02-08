@@ -212,22 +212,22 @@ MonoBehaviour:
       RewardCount: 21
     ZoneType: 0
   - ZoneRewards:
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 21
-      RewardCount: 91
-    - RewardType: 28
-      RewardCount: 15
-    - RewardType: 29
-      RewardCount: 77
-    - RewardType: 10
-      RewardCount: 17
-    - RewardType: 30
-      RewardCount: 93
-    - RewardType: 18
-      RewardCount: 18
-    - RewardType: 27
-      RewardCount: 81
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 20
     ZoneType: 0
   - ZoneRewards:
     - RewardType: 0

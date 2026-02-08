@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,12 +47,13 @@ namespace Zone
         private void Start()
         {
             InitialZoneNumbers();
-            WheelEvents.OnZoneChanged += MoveToNextZone;
+            WheelEvents.OnZoneChanged += HandleZoneChanged;
+            MoveToNextZone(GameManager.Instance.Data.CurrentZoneIndex, false);
         }
 
         private void OnDestroy()
         {
-            WheelEvents.OnZoneChanged -= MoveToNextZone;
+            WheelEvents.OnZoneChanged -= HandleZoneChanged;
         }
 
         private void InitialZoneNumbers()
@@ -68,16 +70,28 @@ namespace Zone
             }
         }
 
-        private void MoveToNextZone(int targetIndex)
+        private void HandleZoneChanged(int targetIndex)
         {
-            // Get content move parameters
+            MoveToNextZone(targetIndex, true);
+        }
+
+        private void MoveToNextZone(int targetIndex, bool animate)
+        {
             var step = _itemWidth + spacing;
             var targetX = _startOffsetX - (targetIndex * step);
 
             UpdateZoneVisuals(targetIndex);
 
-            // Move content.
-            uiRectZoneContainer.DOAnchorPosX(targetX, animationDuration).SetEase(animationEase);
+            if (animate)
+            {
+                // Smooth move during gameplay
+                uiRectZoneContainer.DOAnchorPosX(targetX, animationDuration).SetEase(animationEase);
+            }
+            else
+            {
+                // Instant jump for initial setup or menu transitions
+                uiRectZoneContainer.anchoredPosition = new Vector2(targetX, uiRectZoneContainer.anchoredPosition.y);
+            }
         }
 
         private void UpdateZoneVisuals(int index)

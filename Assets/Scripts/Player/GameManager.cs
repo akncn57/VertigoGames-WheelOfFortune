@@ -18,6 +18,8 @@ namespace Player
             }
 
             Instance = this;
+            
+            Data = PlayerData.Load();
         }
 
         private void OnEnable()
