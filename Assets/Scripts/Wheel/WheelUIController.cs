@@ -54,6 +54,7 @@ namespace Wheel
         {
             WheelEvents.OnInOutEnded += EnableSpinButton;
             WheelEvents.OnGameLose += EnableGameLosePanel;
+            WheelEvents.OnContinueGame += PrepareWheel;
             spinButton.onClick.AddListener(Spin);
         }
 
@@ -61,6 +62,7 @@ namespace Wheel
         {
             WheelEvents.OnInOutEnded -= EnableSpinButton;
             WheelEvents.OnGameLose -= EnableGameLosePanel;
+            WheelEvents.OnContinueGame -= PrepareWheel;
             spinButton.onClick.RemoveAllListeners();
         }
 
