@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Wheel;
 
-namespace GameLose
+namespace UI
 {
     public class GameLosePanelUIController : MonoBehaviour
     {
@@ -59,7 +59,7 @@ namespace GameLose
                 throw;
             }
             
-            WheelEvents.OnContinueGame?.Invoke();
+            GameEvents.OnContinueGame?.Invoke();
             gameObject.SetActive(false);
         }
         

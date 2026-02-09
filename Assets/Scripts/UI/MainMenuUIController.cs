@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MainMenu
+namespace UI
 {
     public class MainMenuUIController : MonoBehaviour
     {
@@ -44,8 +44,9 @@ namespace MainMenu
         {
             GameManager.Instance.Data.OnRewardChanged -= UpdateCashValue;
             
-            playGameButton.onClick.RemoveAllListeners();
-            exitGameButton.onClick.RemoveAllListeners();
+            playGameButton.onClick.RemoveListener(PlayGame);
+            exitGameButton.onClick.RemoveListener(ExitGame);
+            testButton.onClick.RemoveListener(OnSecretTriggerClicked);
         }
 
         private void PlayGame()

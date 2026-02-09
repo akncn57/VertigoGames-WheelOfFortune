@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-namespace Wheel
+namespace UI
 {
     public class WheelSlotUI : MonoBehaviour
     {

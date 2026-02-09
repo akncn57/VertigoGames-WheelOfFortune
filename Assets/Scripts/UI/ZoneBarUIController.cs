@@ -4,8 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Wheel;
+using Zone;
 
-namespace Zone
+namespace UI
 {
     public class ZoneBarUIController : MonoBehaviour
     {
@@ -44,13 +45,13 @@ namespace Zone
         private void Start()
         {
             InitialZoneNumbers();
-            WheelEvents.OnZoneChanged += HandleZoneChanged;
+            GameEvents.OnZoneChanged += HandleZoneChanged;
             MoveToNextZone(GameManager.Instance.Data.CurrentZoneIndex, false);
         }
 
         private void OnDestroy()
         {
-            WheelEvents.OnZoneChanged -= HandleZoneChanged;
+            GameEvents.OnZoneChanged -= HandleZoneChanged;
         }
 
         private void InitialZoneNumbers()

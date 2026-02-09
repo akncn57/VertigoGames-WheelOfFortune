@@ -6,10 +6,11 @@ using Rewards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Wheel;
 using Zone;
 using Random = UnityEngine.Random;
 
-namespace Wheel
+namespace UI
 {
     public class WheelUIController: MonoBehaviour
     {
@@ -50,18 +51,18 @@ namespace Wheel
 
         private void OnEnable()
         {
-            WheelEvents.OnInOutEnded += EnableSpinButton;
-            WheelEvents.OnGameLose += EnableGameLosePanel;
-            WheelEvents.OnContinueGame += PrepareWheel;
+            GameEvents.OnInOutsEnded += EnableSpinButton;
+            GameEvents.OnGameLose += EnableGameLosePanel;
+            GameEvents.OnContinueGame += PrepareWheel;
             spinButton.onClick.AddListener(Spin);
         }
 
         private void OnDisable()
         {
-            WheelEvents.OnInOutEnded -= EnableSpinButton;
-            WheelEvents.OnGameLose -= EnableGameLosePanel;
-            WheelEvents.OnContinueGame -= PrepareWheel;
-            spinButton.onClick.RemoveAllListeners();
+            GameEvents.OnInOutsEnded -= EnableSpinButton;
+            GameEvents.OnGameLose -= EnableGameLosePanel;
+            GameEvents.OnContinueGame -= PrepareWheel;
+            spinButton.onClick.RemoveListener(Spin);
         }
 
         private void Start()
@@ -86,7 +87,7 @@ namespace Wheel
             var selectedReward = _currentZoneRewards[randomIndex];
             var targetAngle = (fullSpins * 360) + (randomIndex * 360 / wheelSlots.Count);
             
-            WheelEvents.OnSpinStarted(selectedReward);
+            GameEvents.OnWheelSpinStarted(selectedReward);
             
             // Reset wheel rotation.
             wheelContent.localRotation = Quaternion.Euler(0, 0, 0);
@@ -100,7 +101,7 @@ namespace Wheel
         private void UpdateZoneData()
         {
             _currentZoneRewards = GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
-            WheelEvents.OnZoneChanged?.Invoke(GameManager.Instance.Data.CurrentZoneIndex);
+            GameEvents.OnZoneChanged?.Invoke(GameManager.Instance.Data.CurrentZoneIndex);
         }
 
         private void RefreshWheelVisuals()
@@ -136,7 +137,7 @@ namespace Wheel
         
         private void OnSpinCompleted(RewardData selectedReward)
         {
-            WheelEvents.OnSpinEnded?.Invoke(selectedReward);
+            GameEvents.OnWheelSpinEnded?.Invoke(selectedReward);
             
             // Prepare wheel UI after spin.
             UpdateZoneData();

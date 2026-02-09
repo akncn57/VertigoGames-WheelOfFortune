@@ -29,14 +29,14 @@ namespace Player
 
         private void OnEnable()
         {
-            WheelEvents.OnSpinStarted += HandleRewardEarned;
-            WheelEvents.OnSpinEnded += HandleGameOver;
+            GameEvents.OnWheelSpinStarted += HandleRewardEarned;
+            GameEvents.OnWheelSpinEnded += HandleGameOver;
         }
 
         private void OnDisable()
         {
-            WheelEvents.OnSpinStarted -= HandleRewardEarned;
-            WheelEvents.OnSpinEnded -= HandleGameOver;
+            GameEvents.OnWheelSpinStarted -= HandleRewardEarned;
+            GameEvents.OnWheelSpinEnded -= HandleGameOver;
         }
 
         private void HandleRewardEarned(RewardData reward)
@@ -47,7 +47,7 @@ namespace Player
 
             Data.AddReward(reward);
             
-            WheelEvents.OnRewardGiven?.Invoke();
+            GameEvents.OnRewardGiven?.Invoke();
             
             Debug.Log($"<color=green><b>[REWARD RECEIVED]</b></color> Type: {reward.RewardType}, Amount: {reward.RewardCount} | Current Zone: {Data.CurrentZoneIndex}");
         }
@@ -57,7 +57,7 @@ namespace Player
             if (reward.RewardType != RewardType.Death) return;
             
             Debug.Log("BOOM! Bomb exploded. Game Over.");
-            WheelEvents.OnGameLose?.Invoke();
+            GameEvents.OnGameLose?.Invoke();
         }
     }
 }

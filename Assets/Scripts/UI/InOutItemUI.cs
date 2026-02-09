@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace InOut
+namespace UI
 {
     public class InOutItemUI : MonoBehaviour
     {

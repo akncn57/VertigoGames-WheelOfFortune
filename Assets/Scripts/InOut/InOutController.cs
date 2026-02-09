@@ -2,7 +2,9 @@
 using DG.Tweening;
 using Player;
 using Rewards;
+using UI;
 using UnityEngine;
+using Wheel;
 
 namespace InOut
 {
@@ -32,6 +34,8 @@ namespace InOut
         
         public void PlayInOut(RewardData rewardData, Vector3 startPos, Vector3 targetPos, Action onComplete)
         {
+            GameEvents.OnInOutsStarted?.Invoke();
+            
             var inOutObject = Instantiate(inOutPrefab, uiTransformOverlayContainer);
             
             inOutObject.SetupInOutItem(GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
@@ -48,6 +52,7 @@ namespace InOut
             flowSequence.OnComplete(() =>
             {
                 onComplete?.Invoke();
+                GameEvents.OnInOutsEnded?.Invoke();
                 Destroy(inOutObject.gameObject);
             });
         }

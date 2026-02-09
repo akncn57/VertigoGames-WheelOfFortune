@@ -8,6 +8,5 @@ namespace Rewards
         public RewardType type;
         public string rewardName;
         public Sprite icon;
-        public GameObject inOutPrefab;
     }
 }

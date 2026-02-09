@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Wheel;
 
-namespace SessionRewards
+namespace UI
 {
     public class SessionRewardsUIController : MonoBehaviour
     {
@@ -21,12 +21,12 @@ namespace SessionRewards
         
         private void OnEnable()
         {
-            WheelEvents.OnSpinEnded += HandleRewardCollected;
+            GameEvents.OnWheelSpinEnded += HandleRewardCollected;
         }
 
         private void OnDisable()
         {
-            WheelEvents.OnSpinEnded -= HandleRewardCollected;
+            GameEvents.OnWheelSpinEnded -= HandleRewardCollected;
         }
 
         private void HandleRewardCollected(RewardData rewardData)
@@ -76,8 +76,6 @@ namespace SessionRewards
 
                     // Play feedback punch effect
                     targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
-                    
-                    WheelEvents.OnInOutEnded?.Invoke();
                 }
             );
         }

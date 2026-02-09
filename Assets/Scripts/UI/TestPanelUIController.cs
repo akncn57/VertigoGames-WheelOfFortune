@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Test
+namespace UI
 {
     public class TestPanelUIController : MonoBehaviour
     {
