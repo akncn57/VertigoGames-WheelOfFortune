@@ -9,9 +9,6 @@ namespace Zone
 {
     public class ZoneBarUIController : MonoBehaviour
     {
-        [Header("Data")]
-        [SerializeField] private ZoneDataSO zoneData;
-
         [Header("Prefabs")]
         [SerializeField] private TMP_Text uiTextZoneNumberValuePrefab;
 
@@ -58,7 +55,7 @@ namespace Zone
 
         private void InitialZoneNumbers()
         {
-            for (var i = 0; i < zoneData.ZoneItems.Count; i++)
+            for (var i = 0; i < GameManager.Instance.ZoneData.ZoneItems.Count; i++)
             {
                 // Instantiate zone text object in content.
                 var zoneText = Instantiate(uiTextZoneNumberValuePrefab, uiRectZoneContainer);
@@ -66,7 +63,7 @@ namespace Zone
                 // Change TMP settings.
                 zoneText.name = $"ui_text_zone_{i + 1}_value"; 
                 zoneText.text = (i + 1).ToString();
-                zoneText.color = GetZoneColor(zoneData.ZoneItems[i].ZoneType);
+                zoneText.color = GetZoneColor(GameManager.Instance.ZoneData.ZoneItems[i].ZoneType);
             }
         }
 
@@ -96,7 +93,7 @@ namespace Zone
 
         private void UpdateZoneVisuals(int index)
         {
-            var zoneType = zoneData.ZoneItems[index].ZoneType;
+            var zoneType = GameManager.Instance.ZoneData.ZoneItems[index].ZoneType;
 
             uiImageZoneBackgroundValue.sprite = zoneType switch
             {

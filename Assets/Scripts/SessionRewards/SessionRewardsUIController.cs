@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DG.Tweening;
 using InOut;
+using Player;
 using Rewards;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,6 @@ namespace SessionRewards
     public class SessionRewardsUIController : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private SessionRewardItemUI uiPrefabRewardItem;
         [SerializeField] private Transform uiTransformItemContainer;
         [SerializeField] private Transform inOutStartPoint;
@@ -43,7 +43,7 @@ namespace SessionRewards
                 targetUI.name = $"ui_item_{rewardData.RewardType}_value";
         
                 // Setup initial empty state
-                targetUI.SetupItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, 0);
+                targetUI.SetupItem(GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, 0);
                 _collectedItems.Add(rewardData.RewardType, targetUI);
                 
                 // Ensure UI Layout updates immediately to get the correct world position for animation.
@@ -70,7 +70,7 @@ namespace SessionRewards
             
                     // Refresh UI with new amount
                     targetUI.SetupItem(
-                        rewardCollection.GetRewardByType(rewardData.RewardType).icon, 
+                        GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, 
                         _sessionRewards[rewardData.RewardType]
                     );
 

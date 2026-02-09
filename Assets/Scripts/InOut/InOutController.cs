@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Player;
 using Rewards;
 using UnityEngine;
 
@@ -9,7 +10,6 @@ namespace InOut
     {
         [Header("References")]
         [SerializeField] private InOutItemUI inOutPrefab;
-        [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private Transform uiTransformOverlayContainer;
 
         [Header("Animation Settings")]
@@ -34,7 +34,7 @@ namespace InOut
         {
             var inOutObject = Instantiate(inOutPrefab, uiTransformOverlayContainer);
             
-            inOutObject.SetupInOutItem(rewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
+            inOutObject.SetupInOutItem(GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
             inOutObject.transform.position = startPos;
             inOutObject.transform.localScale = Vector3.zero;
 

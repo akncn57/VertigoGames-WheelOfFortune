@@ -16,20 +16,20 @@ MonoBehaviour:
   - ZoneRewards:
     - RewardType: 0
       RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
-    - RewardType: 0
-      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 35
+    - RewardType: 15
+      RewardCount: 3
+    - RewardType: 19
+      RewardCount: 2
+    - RewardType: 27
+      RewardCount: 150
+    - RewardType: 27
+      RewardCount: 100
+    - RewardType: 8
+      RewardCount: 6
+    - RewardType: 24
+      RewardCount: 1
     ZoneType: 0
   - ZoneRewards:
     - RewardType: 0

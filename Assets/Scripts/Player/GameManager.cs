@@ -6,8 +6,13 @@ namespace Player
 {
     public class GameManager : MonoBehaviour
     {
+        [SerializeField] private ZoneDataSO zoneData;
+        [SerializeField] private RewardCollection rewardCollection;
+        
         public static GameManager Instance { get; private set; }
-        public PlayerData Data { get; private set; } = new PlayerData();
+        public PlayerData Data { get; private set; } = new();
+        public ZoneDataSO ZoneData => zoneData;
+        public RewardCollection RewardCollection => rewardCollection;
 
         private void Awake()
         {

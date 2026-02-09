@@ -15,8 +15,6 @@ namespace Wheel
     {
         [Header("References")]
         [SerializeField] private RectTransform wheelContent;
-        [SerializeField] private ZoneDataSO zoneData;
-        [SerializeField] private RewardCollection rewardCollection;
         [SerializeField] private Image wheelImage;
         [SerializeField] private Image wheelIndicatorImage;
         [SerializeField] private Button spinButton;
@@ -101,14 +99,14 @@ namespace Wheel
 
         private void UpdateZoneData()
         {
-            _currentZoneRewards = zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
+            _currentZoneRewards = GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards;
             WheelEvents.OnZoneChanged?.Invoke(GameManager.Instance.Data.CurrentZoneIndex);
         }
 
         private void RefreshWheelVisuals()
         {
             // Set wheel UI.
-            switch (zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneType)
+            switch (GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneType)
             {
                 case ZoneType.Normal:
                     wheelImage.sprite = normaZoneWheelSprite;
@@ -130,8 +128,8 @@ namespace Wheel
             for (var i = 0; i < wheelSlots.Count; i++)
             {
                 wheelSlots[i].SetupSlot(
-                    rewardCollection.GetRewardByType(zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardType).icon,
-                    zoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardCount
+                    GameManager.Instance.RewardCollection.GetRewardByType(GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardType).icon,
+                    GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardCount
                 );
             }
         }
@@ -160,13 +158,13 @@ namespace Wheel
             var nextSuper = -1;
 
             // Search for the upcoming special zones starting from the next index
-            for (var i = currentIndex + 1; i < zoneData.ZoneItems.Count; i++)
+            for (var i = currentIndex + 1; i < GameManager.Instance.ZoneData.ZoneItems.Count; i++)
             {
                 // Store user-friendly zone number (index + 1)
-                if (nextSafe == -1 && zoneData.ZoneItems[i].ZoneType == ZoneType.Safe)
+                if (nextSafe == -1 && GameManager.Instance.ZoneData.ZoneItems[i].ZoneType == ZoneType.Safe)
                     nextSafe = i + 1;
     
-                if (nextSuper == -1 && zoneData.ZoneItems[i].ZoneType == ZoneType.Super)
+                if (nextSuper == -1 && GameManager.Instance.ZoneData.ZoneItems[i].ZoneType == ZoneType.Super)
                     nextSuper = i + 1;
 
                 // Stop searching once both types are found for optimization

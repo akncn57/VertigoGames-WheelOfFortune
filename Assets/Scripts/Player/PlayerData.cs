@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Player
 {
-    [System.Serializable]
+    [Serializable]
     public class PlayerData
     {
         public int CurrentZoneIndex = 0;

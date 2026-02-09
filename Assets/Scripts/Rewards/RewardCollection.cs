@@ -7,7 +7,7 @@ namespace Rewards
     [CreateAssetMenu(fileName = "RewardCollection", menuName = "Rewards/Collection")]
     public class RewardCollection : ScriptableObject
     {
-        public List<RewardItemSO> allRewards = new List<RewardItemSO>();
+        public List<RewardItemSO> allRewards = new();
         
         public RewardItemSO GetRewardByType(RewardType type)
         {
