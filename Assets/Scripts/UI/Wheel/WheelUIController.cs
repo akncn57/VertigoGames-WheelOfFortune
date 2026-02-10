@@ -57,6 +57,7 @@ namespace UI.Wheel
             GameEvents.OnReviveSuccess += PrepareWheel;
             spinButton.onClick.AddListener(Spin);
             
+            EnableSpinButton();
             PrepareWheel();
             UpdateZoneDescriptions();
         }
@@ -72,7 +73,6 @@ namespace UI.Wheel
         
         private void PrepareWheel()
         {
-            EnableSpinButton();
             UpdateZoneData();
             RefreshWheelVisuals();
         }
