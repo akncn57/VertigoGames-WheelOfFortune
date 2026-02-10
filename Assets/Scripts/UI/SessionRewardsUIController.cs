@@ -31,6 +31,8 @@ namespace UI
 
         private void HandleRewardCollected(RewardData rewardData)
         {
+            if (rewardData.RewardType == RewardType.Death) return;
+            
             SessionRewardItemUI targetUI;
             var isFirstTime = !_sessionRewards.ContainsKey(rewardData.RewardType);
 
