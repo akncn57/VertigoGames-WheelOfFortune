@@ -71,7 +71,6 @@ namespace Player
             if (reward.RewardType == RewardType.Death) 
             {
                 Logger.Log("GameManager", "Hit a bomb! Waiting for player decision.");
-                Data.SetZoneIndex(0);
                 return;
             }
 
