@@ -24,6 +24,7 @@ namespace UI.SessionRewards
         private void OnEnable()
         {
             GameEvents.OnWheelSpinEnded += HandleRewardCollected;
+            GameEvents.OnWheelSpinStarted += DisableExitButton;
             ResetSessionUI();
             exitButton.onClick.AddListener(ExitGame);
         }
@@ -31,6 +32,7 @@ namespace UI.SessionRewards
         private void OnDisable()
         {
             GameEvents.OnWheelSpinEnded -= HandleRewardCollected;
+            GameEvents.OnWheelSpinStarted -= DisableExitButton;
         }
 
         private void HandleRewardCollected(RewardData rewardData)
@@ -82,6 +84,8 @@ namespace UI.SessionRewards
 
                     // Play feedback punch effect
                     targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
+
+                    EnableExitButton();
                 }
             );
         }
@@ -95,6 +99,16 @@ namespace UI.SessionRewards
             {
                 Destroy(child.gameObject);
             }
+        }
+
+        private void EnableExitButton()
+        {
+            exitButton.interactable = true;
+        }
+        
+        private void DisableExitButton(RewardData rewardData)
+        {
+            exitButton.interactable = false;
         }
 
         private void ExitGame()
