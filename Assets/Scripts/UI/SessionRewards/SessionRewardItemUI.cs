@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.SessionRewards
 {
     public class SessionRewardItemUI : MonoBehaviour
     {

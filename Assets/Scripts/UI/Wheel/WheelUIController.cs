@@ -11,7 +11,7 @@ using Wheel;
 using Zone;
 using Random = UnityEngine.Random;
 
-namespace UI
+namespace UI.Wheel
 {
     public class WheelUIController: MonoBehaviour
     {

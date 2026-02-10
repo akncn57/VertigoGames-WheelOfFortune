@@ -1,12 +1,11 @@
-﻿using System.Linq;
-using HUD;
+﻿using HUD;
 using Player;
 using Rewards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Test
 {
     public class TestPanelUIController : MonoBehaviour
     {

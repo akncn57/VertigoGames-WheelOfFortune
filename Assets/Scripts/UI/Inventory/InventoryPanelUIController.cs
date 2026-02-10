@@ -5,7 +5,7 @@ using Rewards;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Inventory
 {
     public class InventoryPanelUIController : MonoBehaviour
     {

@@ -5,9 +5,8 @@ using Rewards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Wheel;
 
-namespace UI
+namespace UI.GameLose
 {
     public class GameLosePanelUIController : MonoBehaviour
     {

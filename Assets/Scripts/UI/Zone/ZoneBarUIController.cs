@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Wheel;
 using Zone;
 
-namespace UI
+namespace UI.Zone
 {
     public class ZoneBarUIController : MonoBehaviour
     {

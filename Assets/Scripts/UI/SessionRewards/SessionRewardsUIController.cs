@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DG.Tweening;
 using HUD;
 using InOut;
@@ -9,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Wheel;
 
-namespace UI
+namespace UI.SessionRewards
 {
     public class SessionRewardsUIController : MonoBehaviour
     {
