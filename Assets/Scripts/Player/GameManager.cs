@@ -67,7 +67,7 @@ namespace Player
             // If it's a bomb;
             if (reward.RewardType == RewardType.Death) 
             {
-                Debug.Log("[GameManager] Hit a bomb! Waiting for player decision.");
+                Logger.Log("GameManager", "Hit a bomb! Waiting for player decision.");
                 Data.SetZoneIndex(0);
                 return;
             }
@@ -82,7 +82,7 @@ namespace Player
             // 3. // Trigger reward given event.
             GameEvents.OnRewardGiven?.Invoke();
             
-            Debug.Log($"[GameManager] Reward: {reward.RewardType} | New Zone: {Data.CurrentZoneIndex}");
+            Logger.Log("GameManager", $"Reward: {reward.RewardType} | New Zone: {Data.CurrentZoneIndex}");
         }
         
         private void AddToSessionRewards(RewardData reward)
@@ -105,7 +105,7 @@ namespace Player
         private void ClearSessionRewards()
         {
             _sessionRewards.Clear();
-            Debug.Log("[GameManager] Session rewards lost!");
+            Logger.Log("GameManager", "Session rewards lost!");
         }
         
         private void HandleGameOver(RewardData reward)
@@ -125,7 +125,7 @@ namespace Player
         {
             if (_sessionRewards.Count == 0)
             {
-                Debug.Log("[GameManager] No rewards to claim.");
+                Logger.Log("GameManager", "No rewards to claim.");
                 return;
             }
 
@@ -135,7 +135,7 @@ namespace Player
                 Data.AddReward(reward);
             }
 
-            Debug.Log($"[GameManager] Successfully claimed {_sessionRewards.Count} types of rewards.");
+            Logger.Log("GameManager", $"Successfully claimed {_sessionRewards.Count} types of rewards.");
 
             ClearSessionRewards();
         }
@@ -150,7 +150,7 @@ namespace Player
     
             if (success)
             {
-                Debug.Log($"[GameManager] Revive successful. Spent {cost} Cash. Player stays at zone: {Data.CurrentZoneIndex}");
+                Logger.Log("GameManager", $"Revive successful. Spent {cost} Cash. Player stays at zone: {Data.CurrentZoneIndex}");
                 
                 // Advance zone index.
                 Data.SetZoneIndex(Data.CurrentZoneIndex + 1);
@@ -160,7 +160,7 @@ namespace Player
             else
             {
                 var currentCash = Data.GetRewardAmount(RewardType.Cash);
-                Debug.Log($"[GameManager] Revive failed! Not enough Cash. Required: {cost}, Available: {currentCash}");
+                Logger.Log("GameManager", $"Revive failed! Not enough Cash. Required: {cost}, Available: {currentCash}");
             }
     
             return success;

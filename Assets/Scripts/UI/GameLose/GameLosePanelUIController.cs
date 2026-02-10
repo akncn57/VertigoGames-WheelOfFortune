@@ -71,7 +71,7 @@ namespace UI.GameLose
             }
             catch (Exception e)
             {
-                Debug.LogError(e);
+                Logger.Error("GameLosePanel", e.Message);
             }
         }
         

@@ -15,7 +15,7 @@ namespace Rewards
 
             if (reward == null)
             {
-                Debug.LogError($"[RewardCollection] Reward of type {type} was not found in the database!");
+                Logger.Error("RewardCollection", $"Reward of type {type} was not found in the database!");
             }
 
             return reward;

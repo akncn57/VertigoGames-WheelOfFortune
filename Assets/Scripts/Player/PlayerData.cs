@@ -33,7 +33,7 @@ namespace Player
             }
             catch (Exception e)
             {
-                Debug.LogError($"[PlayerData] Save failed: {e.Message}");
+                Logger.Error("PlayerData", $"Save failed: {e.Message}");
             }
         }
 
@@ -51,7 +51,7 @@ namespace Player
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"[PlayerData] Load failed: {e.Message}");
+                    Logger.Error("PlayerData", $"Load failed: {e.Message}");
                 }
             }
             
@@ -65,7 +65,7 @@ namespace Player
         {
             if (zoneIndex < 0)
             {
-                Debug.LogError("[PlayerData] ZoneIndex out of range!");
+                Logger.Error("PlayerData", "ZoneIndex out of range!");
                 return;
             }
             
@@ -81,7 +81,7 @@ namespace Player
         {
             if (reward.RewardCount < 0)
             {
-                Debug.LogError("[PlayerData] RewardCount cannot be negative!");
+                Logger.Error("PlayerData", "RewardCount cannot be negative!");
                 return;
             }
             
@@ -115,7 +115,7 @@ namespace Player
         {
             if (amount <= 0)
             {
-                Debug.LogError("[PlayerData] Spend amount must be positive!");
+                Logger.Error("PlayerData", "Spend amount must be positive!");
                 return false;
             }
             
