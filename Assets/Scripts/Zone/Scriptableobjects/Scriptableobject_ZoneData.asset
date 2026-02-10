@@ -16,19 +16,19 @@ MonoBehaviour:
   - ZoneRewards:
     - RewardType: 0
       RewardCount: 0
-    - RewardType: 3
+    - RewardType: 0
       RewardCount: 35
-    - RewardType: 15
+    - RewardType: 0
       RewardCount: 3
-    - RewardType: 19
+    - RewardType: 0
       RewardCount: 2
-    - RewardType: 27
+    - RewardType: 0
       RewardCount: 150
-    - RewardType: 27
+    - RewardType: 0
       RewardCount: 100
-    - RewardType: 8
+    - RewardType: 0
       RewardCount: 6
-    - RewardType: 24
+    - RewardType: 0
       RewardCount: 1
     ZoneType: 0
   - ZoneRewards:

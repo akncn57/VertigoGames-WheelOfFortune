@@ -38,11 +38,21 @@ namespace Player
 
         private void OnEnable()
         {
+            SubscribeToEvents();
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeFromEvents();
+        }
+
+        private void SubscribeToEvents()
+        {
             GameEvents.OnWheelSpinStarted += HandleRewardEarned;
             GameEvents.OnWheelSpinEnded += HandleGameOver;
         }
 
-        private void OnDisable()
+        private void UnsubscribeFromEvents()
         {
             GameEvents.OnWheelSpinStarted -= HandleRewardEarned;
             GameEvents.OnWheelSpinEnded -= HandleGameOver;
@@ -91,7 +101,9 @@ namespace Player
             {
                 Debug.Log($"[GameManager] Revive successful. Spent {cost} Cash. Player stays at zone: {Data.CurrentZoneIndex}");
                 
+                // Advance zone index.
                 Data.SetZoneIndex(Data.CurrentZoneIndex + 1);
+                
                 GameEvents.OnReviveSuccess?.Invoke();
             }
             else
