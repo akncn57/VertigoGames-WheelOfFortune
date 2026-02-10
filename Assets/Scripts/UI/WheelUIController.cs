@@ -53,7 +53,7 @@ namespace UI
         {
             GameEvents.OnInOutsEnded += EnableSpinButton;
             GameEvents.OnGameLose += EnableGameLosePanel;
-            GameEvents.OnContinueGame += PrepareWheel;
+            GameEvents.OnReviveSuccess += PrepareWheel;
             spinButton.onClick.AddListener(Spin);
         }
 
@@ -61,7 +61,7 @@ namespace UI
         {
             GameEvents.OnInOutsEnded -= EnableSpinButton;
             GameEvents.OnGameLose -= EnableGameLosePanel;
-            GameEvents.OnContinueGame -= PrepareWheel;
+            GameEvents.OnReviveSuccess -= PrepareWheel;
             spinButton.onClick.RemoveListener(Spin);
         }
 

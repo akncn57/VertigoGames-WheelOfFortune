@@ -51,16 +51,17 @@ namespace UI
         {
             try
             {
-                GameManager.Instance.Data.TrySpendReward(RewardType.Cash, 100);
+                var isReviveSuccessful = GameManager.Instance.TryReviveWithCash(200);
+
+                if (isReviveSuccessful)
+                {
+                    gameObject.SetActive(false);
+                }
             }
             catch (Exception e)
             {
-                Debug.Log(e);
-                throw;
+                Debug.LogError(e);
             }
-            
-            GameEvents.OnContinueGame?.Invoke();
-            gameObject.SetActive(false);
         }
         
         private void InitializeCashValue()

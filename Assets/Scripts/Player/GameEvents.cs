@@ -12,6 +12,6 @@ namespace Wheel
         public static Action OnInOutsEnded;
         public static Action OnRewardGiven;
         public static Action OnGameLose;
-        public static Action OnContinueGame;
+        public static Action OnReviveSuccess;
     }
 }

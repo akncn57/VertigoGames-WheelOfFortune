@@ -57,17 +57,15 @@ namespace UI
 
         private void SetZoneIndex()
         {
-            if (int.TryParse(inputFieldZoneIndex.text, out int newIndex))
+            if (int.TryParse(inputFieldZoneIndex.text, out var newIndex))
             {
                 GameManager.Instance.Data.SetZoneIndex(newIndex);
                 GameManager.Instance.Data.Save();
             }
             
-            if (int.TryParse(inputFieldCashValue.text, out int newValue))
+            if (int.TryParse(inputFieldCashValue.text, out var newValue))
             {
-                var cashReward = GameManager.Instance.Data.CollectedRewards.FirstOrDefault(r => r.RewardType == RewardType.Cash);
-                if (cashReward != null) GameManager.Instance.Data.AddReward(new RewardData{RewardType = RewardType.Cash, RewardCount = newValue});
-                GameManager.Instance.Data.Save();
+                GameManager.Instance.Data.AddReward(new RewardData{RewardType = RewardType.Cash, RewardCount = newValue});
             }
         }
     }
