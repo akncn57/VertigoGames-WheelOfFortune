@@ -38,6 +38,9 @@ namespace Player
             
             // Initial data load from disk.
             Data = PlayerData.Load();
+            
+            // Set fps to 60.
+            Application.targetFrameRate = 60;
         }
 
         private void OnEnable()
