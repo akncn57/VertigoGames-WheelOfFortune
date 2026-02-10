@@ -281,9 +281,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbac46d3bb14417b643a6b970f8c8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
   uiPrefabRewardItem: {fileID: 5162735857813371069, guid: 3fbde452c27dd0d46985025897671315, type: 3}
   uiTransformItemContainer: {fileID: 2179329776258288096}
+  inOutStartPoint: {fileID: 0}
+  exitButton: {fileID: 4017854983025294320}
 --- !u!1 &6838548606703894994
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +533,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 302afb16210202947aa95ebb9fa7fceb, type: 3}
+--- !u!114 &4017854983025294320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 685530862588953838, guid: 302afb16210202947aa95ebb9fa7fceb, type: 3}
+  m_PrefabInstance: {fileID: 4485927719039663902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6515850903457798227 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7218641977731802957, guid: 302afb16210202947aa95ebb9fa7fceb, type: 3}

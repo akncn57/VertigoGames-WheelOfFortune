@@ -42,7 +42,7 @@ namespace UI
             _startOffsetX = uiRectZoneContainer.anchoredPosition.x;
         }
 
-        private void Start()
+        private void OnEnable()
         {
             InitialZoneNumbers();
             GameEvents.OnZoneChanged += HandleZoneChanged;

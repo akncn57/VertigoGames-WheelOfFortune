@@ -56,6 +56,9 @@ namespace UI
             GameEvents.OnGameLose += EnableGameLosePanel;
             GameEvents.OnReviveSuccess += PrepareWheel;
             spinButton.onClick.AddListener(Spin);
+            
+            PrepareWheel();
+            UpdateZoneDescriptions();
         }
 
         private void OnDisable()
@@ -66,13 +69,7 @@ namespace UI
             GameEvents.OnReviveSuccess -= PrepareWheel;
             spinButton.onClick.RemoveListener(Spin);
         }
-
-        private void Start()
-        {
-            PrepareWheel();
-            UpdateZoneDescriptions();
-        }
-
+        
         private void PrepareWheel()
         {
             UpdateZoneData();

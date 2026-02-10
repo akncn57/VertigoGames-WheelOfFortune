@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DG.Tweening;
+using HUD;
 using InOut;
 using Player;
 using Rewards;
@@ -15,6 +16,7 @@ namespace UI
         [SerializeField] private SessionRewardItemUI uiPrefabRewardItem;
         [SerializeField] private Transform uiTransformItemContainer;
         [SerializeField] private Transform inOutStartPoint;
+        [SerializeField] private Button exitButton;
 
         private readonly Dictionary<RewardType, SessionRewardItemUI> _collectedItems = new();
         private readonly Dictionary<RewardType, int> _sessionRewards = new();
@@ -22,6 +24,8 @@ namespace UI
         private void OnEnable()
         {
             GameEvents.OnWheelSpinEnded += HandleRewardCollected;
+            
+            exitButton.onClick.AddListener(ExitGame);
         }
 
         private void OnDisable()
@@ -80,6 +84,13 @@ namespace UI
                     targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
                 }
             );
+        }
+
+        private void ExitGame()
+        {
+            GameManager.Instance.DepositRewards();
+            HUDManager.Instance.ShowMainMenu();
+            HUDManager.Instance.HideWheelGame();
         }
     }
 }

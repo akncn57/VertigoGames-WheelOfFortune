@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using Wheel;
 using Rewards;
 
@@ -16,6 +17,8 @@ namespace Player
         public static GameManager Instance { get; private set; }
         
         public PlayerData Data { get; private set; }
+        public IReadOnlyList<RewardData> SessionRewards => _sessionRewards;
+        private List<RewardData> _sessionRewards = new();
 
         public ZoneDataSO ZoneData => zoneData;
         public RewardCollection RewardCollection => rewardCollection;
@@ -69,7 +72,7 @@ namespace Player
 
             // Normal Reward Flow:
             // 1. Add the reward to data
-            Data.AddReward(reward);
+            AddToSessionRewards(reward);
             
             // 2. Advance the zone index
             Data.SetZoneIndex(Data.CurrentZoneIndex + 1);
@@ -80,6 +83,30 @@ namespace Player
             Debug.Log($"[GameManager] Reward: {reward.RewardType} | New Zone: {Data.CurrentZoneIndex}");
         }
         
+        private void AddToSessionRewards(RewardData reward)
+        {
+            var existing = _sessionRewards.Find(r => r.RewardType == reward.RewardType);
+            
+            if (existing != null)
+            {
+                existing.RewardCount += reward.RewardCount;
+            }
+            else
+            {
+                _sessionRewards.Add(new RewardData { 
+                    RewardType = reward.RewardType, 
+                    RewardCount = reward.RewardCount 
+                });
+            }
+        }
+        
+        private void ClearSessionRewards()
+        {
+            _sessionRewards.Clear();
+            Data.SetZoneIndex(0);
+            Debug.Log("[GameManager] Session rewards lost!");
+        }
+        
         private void HandleGameOver(RewardData reward)
         {
             if (reward.RewardType == RewardType.Death)
@@ -87,6 +114,29 @@ namespace Player
                 // Trigger the game lose event.
                 GameEvents.OnGameLose?.Invoke();
             }
+        }
+        
+        /// <summary>
+        /// Transfers all session rewards to persistent player data and saves.
+        /// Call this when the player clicks "Exit" or "Collect".
+        /// </summary>
+        public void DepositRewards()
+        {
+            if (_sessionRewards.Count == 0)
+            {
+                Debug.Log("[GameManager] No rewards to claim.");
+                return;
+            }
+
+            // Transfer each session reward to permanent data
+            foreach (var reward in _sessionRewards)
+            {
+                Data.AddReward(reward);
+            }
+
+            Debug.Log($"[GameManager] Successfully claimed {_sessionRewards.Count} types of rewards.");
+
+            ClearSessionRewards();
         }
         
         /// <summary>
