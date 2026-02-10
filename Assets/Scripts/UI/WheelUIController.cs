@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using HUD;
 using Player;
 using Rewards;
 using TMPro;
@@ -21,7 +22,6 @@ namespace UI
         [SerializeField] private Button spinButton;
         [SerializeField] private TMP_Text safeZoneDescriptionText;
         [SerializeField] private TMP_Text superZoneDescriptionText;
-        [SerializeField] private GameObject gameLosePanel;
         
         [Header("Zone Sprites")]
         [SerializeField] private Sprite normaZoneWheelSprite;
@@ -72,6 +72,7 @@ namespace UI
         
         private void PrepareWheel()
         {
+            EnableSpinButton();
             UpdateZoneData();
             RefreshWheelVisuals();
         }
@@ -183,7 +184,8 @@ namespace UI
 
         private void EnableGameLosePanel()
         {
-            gameLosePanel.SetActive(true);
+            HUDManager.Instance.ShowLoseGame();
+            HUDManager.Instance.HideWheelGame();
         }
     }
 }

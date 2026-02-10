@@ -67,6 +67,7 @@ namespace Player
             if (reward.RewardType == RewardType.Death) 
             {
                 Debug.Log("[GameManager] Hit a bomb! Waiting for player decision.");
+                Data.SetZoneIndex(0);
                 return;
             }
 
@@ -103,7 +104,6 @@ namespace Player
         private void ClearSessionRewards()
         {
             _sessionRewards.Clear();
-            Data.SetZoneIndex(0);
             Debug.Log("[GameManager] Session rewards lost!");
         }
         

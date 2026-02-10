@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using HUD;
 using InOut;
@@ -24,7 +25,7 @@ namespace UI
         private void OnEnable()
         {
             GameEvents.OnWheelSpinEnded += HandleRewardCollected;
-            
+            ResetSessionUI();
             exitButton.onClick.AddListener(ExitGame);
         }
 
@@ -84,6 +85,17 @@ namespace UI
                     targetUI.transform.DOPunchScale(Vector3.one * 0.15f, 0.3f, 5, 1f);
                 }
             );
+        }
+        
+        private void ResetSessionUI()
+        {
+            _sessionRewards.Clear();
+            _collectedItems.Clear();
+
+            foreach (Transform child in uiTransformItemContainer)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         private void ExitGame()

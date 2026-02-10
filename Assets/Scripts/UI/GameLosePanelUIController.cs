@@ -43,8 +43,9 @@ namespace UI
 
         private void ReturnMainMenu()
         {
-            HUDManager.Instance.HideWheelGame();
+            GameManager.Instance.Data.SetZoneIndex(0);
             HUDManager.Instance.ShowMainMenu();
+            HUDManager.Instance.HideLoseGame();
         }
 
         private void ContinueGame()
@@ -55,7 +56,7 @@ namespace UI
 
                 if (isReviveSuccessful)
                 {
-                    gameObject.SetActive(false);
+                    HUDManager.Instance.HideLoseGame();
                 }
             }
             catch (Exception e)

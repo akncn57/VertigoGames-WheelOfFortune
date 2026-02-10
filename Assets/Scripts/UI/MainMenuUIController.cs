@@ -11,6 +11,7 @@ namespace UI
     {
         [SerializeField] private TMP_Text cashValueText;
         [SerializeField] private Button playGameButton;
+        [SerializeField] private Button inventoryButton;
         [SerializeField] private Button exitGameButton;
         [Header("Test")]
         [SerializeField] private Button testButton;
@@ -25,6 +26,7 @@ namespace UI
             if (!playGameButton && !exitGameButton)
             {
                 playGameButton = GetComponentInChildren<Button>(true);
+                inventoryButton = GetComponentInChildren<Button>(true);
                 exitGameButton = GetComponentInChildren<Button>(true);
                 testButton = GetComponentInChildren<Button>(true);
             }
@@ -35,6 +37,7 @@ namespace UI
             GameManager.Instance.Data.OnRewardChanged += UpdateCashValue;
             
             playGameButton.onClick.AddListener(PlayGame);
+            inventoryButton.onClick.AddListener(OpenInventory);
             exitGameButton.onClick.AddListener(ExitGame);
             testButton.onClick.AddListener(OnSecretTriggerClicked);
             InitializeCashValue();
@@ -45,6 +48,7 @@ namespace UI
             GameManager.Instance.Data.OnRewardChanged -= UpdateCashValue;
             
             playGameButton.onClick.RemoveListener(PlayGame);
+            inventoryButton.onClick.RemoveListener(OpenInventory);
             exitGameButton.onClick.RemoveListener(ExitGame);
             testButton.onClick.RemoveListener(OnSecretTriggerClicked);
         }
@@ -53,6 +57,12 @@ namespace UI
         {
             HUDManager.Instance.HideMainMenu();
             HUDManager.Instance.ShowWheelGame();
+        }
+
+        private void OpenInventory()
+        {
+            HUDManager.Instance.HideMainMenu();
+            HUDManager.Instance.ShowInventoryPanel();
         }
 
         private void ExitGame()

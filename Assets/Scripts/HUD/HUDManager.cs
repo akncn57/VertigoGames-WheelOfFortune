@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace HUD
 {
     public class HUDManager : MonoBehaviour
     {
-        [SerializeField] private GameObject mainMenuCanvas;
-        [SerializeField] private GameObject wheelGameCanvas;
-        [SerializeField] private GameObject testCanvas;
+        [SerializeField] private GameObject mainMenuPanel;
+        [SerializeField] private GameObject inventoryPanel;
+        [SerializeField] private GameObject wheelGamePanel;
+        [SerializeField] private GameObject loseGamePanel;
+        [SerializeField] private GameObject testPanel;
         
         public static HUDManager Instance {get; private set;}
 
@@ -23,32 +26,52 @@ namespace HUD
 
         public void ShowMainMenu()
         {
-            mainMenuCanvas.SetActive(true);
+            mainMenuPanel.SetActive(true);
         }
 
         public void HideMainMenu()
         {
-            mainMenuCanvas.SetActive(false);
+            mainMenuPanel.SetActive(false);
+        }
+
+        public void ShowInventoryPanel()
+        {
+            inventoryPanel.SetActive(true);
+        }
+
+        public void HideInventoryPanel()
+        {
+            inventoryPanel.SetActive(false);
         }
 
         public void ShowWheelGame()
         {
-            wheelGameCanvas.SetActive(true);
+            wheelGamePanel.SetActive(true);
         }
 
         public void HideWheelGame()
         {
-            wheelGameCanvas.SetActive(false);
+            wheelGamePanel.SetActive(false);
+        }
+
+        public void ShowLoseGame()
+        {
+            loseGamePanel.SetActive(true);
+        }
+
+        public void HideLoseGame()
+        {
+            loseGamePanel.SetActive(false);
         }
 
         public void ShowTestCanvas()
         {
-            testCanvas.SetActive(true);
+            testPanel.SetActive(true);
         }
 
         public void HideTestCanvas()
         {
-            testCanvas.SetActive(false);
+            testPanel.SetActive(false);
         }
     }
 }
