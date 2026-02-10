@@ -12,7 +12,7 @@ namespace UI.Base
         public void SetupItem(Sprite icon, int value)
         {
             iconImage.sprite = icon;
-            valueText.text = value.ToString();
+            valueText.text = value > 0 ? $"x{value}" : "";
         }
     }
 }

@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc3510491c3491583ad3b39bc275e1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
+  zoneData: {fileID: 11400000, guid: 65bd2c2d7c06dfc4b9b8d93083725784, type: 2}
   rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
 --- !u!4 &440229906
 Transform:

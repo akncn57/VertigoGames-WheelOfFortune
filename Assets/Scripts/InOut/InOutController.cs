@@ -2,7 +2,6 @@
 using DG.Tweening;
 using Player;
 using Rewards;
-using UI;
 using UI.InOut;
 using UnityEngine;
 using Wheel;
