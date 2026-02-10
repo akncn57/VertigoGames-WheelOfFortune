@@ -66,6 +66,7 @@ namespace UI.GameLose
 
                 if (isReviveSuccessful)
                 {
+                    HUDManager.Instance.ShowWheelGame();
                     HUDManager.Instance.HideLoseGame();
                 }
             }
