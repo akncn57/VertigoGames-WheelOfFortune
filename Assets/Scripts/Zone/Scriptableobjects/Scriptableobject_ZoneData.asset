@@ -12,5 +12,1085 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a94a06b4e44422380f856837b2e2dc5, type: 3}
   m_Name: Scriptableobject_ZoneData
   m_EditorClassIdentifier: 
-  ZoneItems: []
+  ZoneItems:
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 29
+      RewardCount: 40
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 400
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 500
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 29
+      RewardCount: 10
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 600
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 19
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 700
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 29
+      RewardCount: 30
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 50
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 40
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 800
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 10
+    - RewardType: 27
+      RewardCount: 10
+    - RewardType: 29
+      RewardCount: 40
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 900
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 10
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 27
+      RewardCount: 40
+    - RewardType: 32
+      RewardCount: 50
+    - RewardType: 3
+      RewardCount: 1000
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 40
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 1100
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 11
+      RewardCount: 25
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 1200
+    - RewardType: 32
+      RewardCount: 10
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 1300
+    - RewardType: 11
+      RewardCount: 25
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 40
+    - RewardType: 3
+      RewardCount: 1400
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 19
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 1500
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 27
+      RewardCount: 20
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 27
+      RewardCount: 10
+    - RewardType: 26
+      RewardCount: 50
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 10
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 1600
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 27
+      RewardCount: 40
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 26
+      RewardCount: 40
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 1700
+    - RewardType: 15
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 1800
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 20
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    ZoneType: 2
+  - ZoneRewards:
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 11
+      RewardCount: 25
+    - RewardType: 3
+      RewardCount: 1900
+    - RewardType: 4
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2000
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 10
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 11
+      RewardCount: 25
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2100
+    - RewardType: 17
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 11
+      RewardCount: 75
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 30
+    - RewardType: 30
+      RewardCount: 40
+    - RewardType: 3
+      RewardCount: 2200
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 2300
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 50
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 11
+      RewardCount: 50
+    - RewardType: 3
+      RewardCount: 2400
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 32
+      RewardCount: 40
+    - RewardType: 16
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2500
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2600
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 28
+      RewardCount: 40
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 29
+      RewardCount: 30
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 50
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2700
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 2800
+    - RewardType: 30
+      RewardCount: 30
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 2900
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 3000
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 21
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 32
+      RewardCount: 40
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3100
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 40
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3200
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 11
+      RewardCount: 25
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 29
+      RewardCount: 20
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3300
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    ZoneType: 2
+  - ZoneRewards:
+    - RewardType: 31
+      RewardCount: 10
+    - RewardType: 3
+      RewardCount: 3400
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 11
+      RewardCount: 50
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 13
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 32
+      RewardCount: 20
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3500
+    - RewardType: 11
+      RewardCount: 75
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 29
+      RewardCount: 40
+    - RewardType: 3
+      RewardCount: 3600
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 10
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 20
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3700
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 30
+      RewardCount: 20
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3800
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 27
+      RewardCount: 10
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 11
+      RewardCount: 50
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 3900
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 20
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 11
+      RewardCount: 25
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4000
+    - RewardType: 29
+      RewardCount: 20
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 40
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 27
+      RewardCount: 10
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 4
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4100
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 29
+      RewardCount: 30
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 4200
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 30
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4300
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 31
+      RewardCount: 30
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 24
+      RewardCount: 1
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 32
+      RewardCount: 40
+    - RewardType: 3
+      RewardCount: 4400
+    - RewardType: 27
+      RewardCount: 20
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 4500
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 31
+      RewardCount: 40
+    - RewardType: 26
+      RewardCount: 20
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 40
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4600
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4700
+    - RewardType: 30
+      RewardCount: 30
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 10
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 4800
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 20
+    - RewardType: 5
+      RewardCount: 1
+    - RewardType: 11
+      RewardCount: 50
+    ZoneType: 2
+  - ZoneRewards:
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 50
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 4900
+    - RewardType: 2
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 27
+      RewardCount: 20
+    - RewardType: 3
+      RewardCount: 5000
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 5100
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 28
+      RewardCount: 30
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 5200
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 2
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 27
+      RewardCount: 40
+    - RewardType: 3
+      RewardCount: 5300
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 21
+      RewardCount: 1
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 11
+      RewardCount: 25
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 40
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 19
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 5400
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 15
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 5500
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 27
+      RewardCount: 20
+    - RewardType: 31
+      RewardCount: 50
+    - RewardType: 14
+      RewardCount: 1
+    - RewardType: 10
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 20
+    - RewardType: 10
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 18
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 5600
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 29
+      RewardCount: 30
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 7
+      RewardCount: 1
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 50
+    - RewardType: 3
+      RewardCount: 5700
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 13
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 5800
+    - RewardType: 15
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 50
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 6
+      RewardCount: 1
+    - RewardType: 25
+      RewardCount: 1
+    ZoneType: 1
+  - ZoneRewards:
+    - RewardType: 2
+      RewardCount: 1
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 30
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 3
+      RewardCount: 5900
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 22
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 6000
+    - RewardType: 30
+      RewardCount: 20
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 25
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 17
+      RewardCount: 1
+    - RewardType: 23
+      RewardCount: 1
+    - RewardType: 1
+      RewardCount: 1
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 26
+      RewardCount: 20
+    - RewardType: 32
+      RewardCount: 40
+    - RewardType: 9
+      RewardCount: 1
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 8
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 6100
+    - RewardType: 0
+      RewardCount: 0
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 3
+      RewardCount: 6200
+    - RewardType: 24
+      RewardCount: 1
+    - RewardType: 12
+      RewardCount: 1
+    - RewardType: 32
+      RewardCount: 50
+    - RewardType: 1
+      RewardCount: 1
+    - RewardType: 20
+      RewardCount: 1
+    - RewardType: 0
+      RewardCount: 0
+    - RewardType: 11
+      RewardCount: 75
+    ZoneType: 0
+  - ZoneRewards:
+    - RewardType: 16
+      RewardCount: 1
+    - RewardType: 30
+      RewardCount: 50
+    - RewardType: 22
+      RewardCount: 1
+    - RewardType: 21
+      RewardCount: 1
+    - RewardType: 3
+      RewardCount: 6300
+    - RewardType: 28
+      RewardCount: 10
+    - RewardType: 32
+      RewardCount: 10
+    - RewardType: 1
+      RewardCount: 1
+    ZoneType: 2
   ReviveCost: 200

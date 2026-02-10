@@ -65,6 +65,8 @@ namespace UI.SessionRewards
 
             // Start transfer animation
             var startPos = inOutStartPoint; 
+            
+            // BUG: If target pos out of the rewards content, inout object flying to void.
             var targetPos = targetUI.transform.position;
 
             InOutController.Instance.PlayInOut(

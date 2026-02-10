@@ -109,9 +109,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498750480383017568}
     m_Modifications:
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864458021914796959, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -240
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184729747353331746, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1623.2258
+      objectReference: {fileID: 0}
     - target: {fileID: 8796705972563501471, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
       propertyPath: m_Name
       value: Prefab_UI_Panel_WheelGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796705972563501471, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8947243101114235519, guid: dadde48bcf0fd2e468053f2e5832874d, type: 3}
       propertyPath: m_Pivot.x

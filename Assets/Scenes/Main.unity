@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc3510491c3491583ad3b39bc275e1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneData: {fileID: 11400000, guid: 65bd2c2d7c06dfc4b9b8d93083725784, type: 2}
+  zoneData: {fileID: 11400000, guid: e179fda898b22044aa58d1ee423c104b, type: 2}
   rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
 --- !u!4 &440229906
 Transform:
@@ -613,21 +613,10 @@ PrefabInstance:
     - target: {fileID: 8108349936040531017, guid: 3f75e30eb1cdb064883f7f01b062ae7f, type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 1799577307}
+      objectReference: {fileID: 0}
     - target: {fileID: 8374731271381451086, guid: 3f75e30eb1cdb064883f7f01b062ae7f, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f75e30eb1cdb064883f7f01b062ae7f, type: 3}
---- !u!114 &1799577307 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6083175851447651220, guid: 3f75e30eb1cdb064883f7f01b062ae7f, type: 3}
-  m_PrefabInstance: {fileID: 1799577306}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
