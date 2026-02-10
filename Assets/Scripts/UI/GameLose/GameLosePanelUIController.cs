@@ -4,6 +4,7 @@ using Player;
 using Rewards;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI.GameLose
@@ -13,6 +14,7 @@ namespace UI.GameLose
         [SerializeField] private Button returnMainMenuButton;
         [SerializeField] private Button continueButton;
         [SerializeField] private TMP_Text cashValueText;
+        [SerializeField] private TMP_Text reviveCostText;
         
         private void OnValidate()
         {
@@ -29,7 +31,16 @@ namespace UI.GameLose
             
             returnMainMenuButton.onClick.AddListener(ReturnMainMenu);
             continueButton.onClick.AddListener(ContinueGame);
+            
             InitializeCashValue();
+            
+            reviveCostText.text = GameManager.Instance.ZoneData.ReviveCost.ToString();
+
+            if (GameManager.Instance.Data.GetRewardAmount(RewardType.Cash) <
+                GameManager.Instance.ZoneData.ReviveCost)
+            {
+                continueButton.interactable = false;
+            }
         }
 
         private void OnDestroy()
@@ -51,7 +62,7 @@ namespace UI.GameLose
         {
             try
             {
-                var isReviveSuccessful = GameManager.Instance.TryReviveWithCash(200);
+                var isReviveSuccessful = GameManager.Instance.TryReviveWithCash(GameManager.Instance.ZoneData.ReviveCost);
 
                 if (isReviveSuccessful)
                 {
