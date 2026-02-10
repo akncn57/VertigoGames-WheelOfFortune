@@ -13,6 +13,7 @@ namespace UI.Inventory
         [SerializeField] private InventoryItemUI itemPrefab;
         [SerializeField] private Transform container;
         [SerializeField] private Button returnMenuButton;
+        [SerializeField] private GameObject descriptionTextObject;
 
         private readonly List<InventoryItemUI> _spawnedItems = new List<InventoryItemUI>();
 
@@ -40,10 +41,16 @@ namespace UI.Inventory
             ClearContainer();
 
             var rewards = GameManager.Instance.Data.CollectedRewards;
+            var isEmpty = rewards == null || rewards.Count == 0;
+            
+            descriptionTextObject.SetActive(isEmpty);
 
-            foreach (var reward in rewards)
+            if (!isEmpty)
             {
-                CreateItemUI(reward);
+                foreach (var reward in rewards)
+                {
+                    CreateItemUI(reward);
+                }
             }
         }
 
