@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2707594720658896868}
   - component: {fileID: 2199495705826096155}
   m_Layer: 5
-  m_Name: Grid_Layout
+  m_Name: ui_gridlayout_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2323352661411058781}
   - component: {fileID: 4399289824021663165}
   m_Layer: 5
-  m_Name: Text_Title
+  m_Name: ui_text_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

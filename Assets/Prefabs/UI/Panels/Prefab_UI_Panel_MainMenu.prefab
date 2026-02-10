@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7291607848013895343}
   - component: {fileID: 8398134149457708817}
   m_Layer: 5
-  m_Name: Text_Title
+  m_Name: ui_text_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5544339470319950021}
   m_Layer: 5
-  m_Name: Container_Buttons
+  m_Name: ui_container_buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2059171840130036130}
   - component: {fileID: 2981076097353235499}
   m_Layer: 5
-  m_Name: Text_NextSuperZone
+  m_Name: ui_text_description_next_superzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3864458021914796959}
   m_Layer: 5
-  m_Name: InOuts_Container
+  m_Name: ui_container_inouts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3922690274307231619}
   - component: {fileID: 1679941902469616212}
   m_Layer: 5
-  m_Name: Text_NextSafeZone
+  m_Name: ui_text_description_next_safezone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

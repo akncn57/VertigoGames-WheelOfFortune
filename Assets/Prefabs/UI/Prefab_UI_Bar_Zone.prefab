@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7270228321090038435}
   - component: {fileID: 5625219732121274401}
   m_Layer: 5
-  m_Name: Scroll View
+  m_Name: ui_container_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4978115743568986868}
   - component: {fileID: 3457018085047084432}
   m_Layer: 5
-  m_Name: Viewport
+  m_Name: ui_viewport_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 3410038393166432469}
   - component: {fileID: 7145550660374574264}
   m_Layer: 5
-  m_Name: Image_Background_Zone
+  m_Name: ui_image_background_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,9 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 6429396323313781957}
   - component: {fileID: 1393297090362017822}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ui_content_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 7731921384808943947}
   - component: {fileID: 791270616513346506}
   m_Layer: 5
-  m_Name: Image_Frame_CurrentZone
+  m_Name: ui_image_frame_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,9 +352,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 6296481377154029202}
   - component: {fileID: 1389361676828092027}
   m_Layer: 5
-  m_Name: Image_Background
+  m_Name: ui_image_background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,7 +496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d503725ccd591419af59936dafacc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
   uiTextZoneNumberValuePrefab: {fileID: 7757701411973943304, guid: 8219555f70f79c6418eb6c35ee77bec8, type: 3}
   uiRectZoneContainer: {fileID: 4156047653855093842}
   uiImageZoneBackgroundValue: {fileID: 7145550660374574264}

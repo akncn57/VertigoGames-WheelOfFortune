@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 8412591995907314455}
   - component: {fileID: 3779917007231333463}
   m_Layer: 5
-  m_Name: Text_Title
+  m_Name: ui_text_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 4773876267037559585}
   - component: {fileID: 761086906761464549}
   m_Layer: 5
-  m_Name: InputField_Cash_Value
+  m_Name: ui_inputfield_current_cash_value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 5639309530433356893}
   - component: {fileID: 1876945480948281345}
   m_Layer: 5
-  m_Name: Text_Cash
+  m_Name: ui_text_current_cash_value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 3326489770450649834}
   - component: {fileID: 8778898252007068653}
   m_Layer: 5
-  m_Name: Text_Zone
+  m_Name: ui_text_current_zone_value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 697100406888808598}
   - component: {fileID: 895169134224396561}
   m_Layer: 5
-  m_Name: InputField_Zone_Value
+  m_Name: ui_inputfield_current_zone_value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
