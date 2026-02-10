@@ -58,7 +58,7 @@ namespace UI.Test
         {
             if (int.TryParse(inputFieldZoneIndex.text, out var newIndex))
             {
-                GameManager.Instance.Data.SetZoneIndex(newIndex);
+                GameManager.Instance.Data.SetZoneIndex(newIndex - 1);
                 GameManager.Instance.Data.Save();
             }
             
