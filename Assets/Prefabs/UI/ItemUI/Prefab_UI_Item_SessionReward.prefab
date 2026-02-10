@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 603996997387791281}
   - component: {fileID: 5162735857813371069}
   m_Layer: 5
-  m_Name: Prefab_UI_SessionReward_Item
+  m_Name: Prefab_UI_Item_SessionReward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,5 +262,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d4f970777744db909e2705bc923f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 9217347754023220076}
-  amountText: {fileID: 1260966153221806112}
+  iconImage: {fileID: 9217347754023220076}
+  valueText: {fileID: 1260966153221806112}

@@ -52,7 +52,7 @@ namespace UI.Inventory
             var newItem = Instantiate(itemPrefab, container);
             var icon = GameManager.Instance.RewardCollection.GetRewardByType(data.RewardType).icon;
             
-            newItem.SetItem(icon, data.RewardCount);
+            newItem.SetupItem(icon, data.RewardCount);
             _spawnedItems.Add(newItem);
         }
 

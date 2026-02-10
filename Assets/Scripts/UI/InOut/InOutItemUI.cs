@@ -1,26 +1,9 @@
-﻿using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UI.Base;
 
 namespace UI.InOut
 {
-    public class InOutItemUI : MonoBehaviour
+    public class InOutItemUI : BaseItemUI
     {
-        [SerializeField] private Image rewardIcon;
-        [SerializeField] private TMP_Text amountText;
         
-        public void SetupInOutItem(Sprite rewardSprite, int value)
-        {
-            rewardIcon.sprite = rewardSprite;
-
-            if (value <= 1)
-            {
-                amountText.text = "";
-            }
-            else
-            {
-                amountText.text = "x" + value;
-            }
-        }
     }
 }

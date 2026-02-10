@@ -1,18 +1,9 @@
-﻿using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UI.Base;
 
 namespace UI.SessionRewards
 {
-    public class SessionRewardItemUI : MonoBehaviour
+    public class SessionRewardItemUI : BaseItemUI
     {
-        [SerializeField] private Image rewardIcon;
-        [SerializeField] private TextMeshProUGUI amountText;
         
-        public void SetupItem(Sprite rewardSprite, int value)
-        {
-            rewardIcon.sprite = rewardSprite;
-            amountText.text = "x" + value;
-        }
     }
 }

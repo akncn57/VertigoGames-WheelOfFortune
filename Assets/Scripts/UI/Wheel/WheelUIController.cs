@@ -128,7 +128,7 @@ namespace UI.Wheel
             // Set wheel reward slots UI.
             for (var i = 0; i < wheelSlots.Count; i++)
             {
-                wheelSlots[i].SetupSlot(
+                wheelSlots[i].SetupItem(
                     GameManager.Instance.RewardCollection.GetRewardByType(GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardType).icon,
                     GameManager.Instance.ZoneData.ZoneItems[GameManager.Instance.Data.CurrentZoneIndex].ZoneRewards[i].RewardCount
                 );

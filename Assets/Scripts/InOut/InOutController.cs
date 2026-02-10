@@ -39,7 +39,7 @@ namespace InOut
             
             var inOutObject = Instantiate(inOutPrefab, uiTransformOverlayContainer);
             
-            inOutObject.SetupInOutItem(GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
+            inOutObject.SetupItem(GameManager.Instance.RewardCollection.GetRewardByType(rewardData.RewardType).icon, rewardData.RewardCount);
             inOutObject.transform.position = startPos;
             inOutObject.transform.localScale = Vector3.zero;
 

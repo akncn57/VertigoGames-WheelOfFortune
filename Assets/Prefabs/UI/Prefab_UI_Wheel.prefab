@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelContent: {fileID: 8928953954582642207}
-  zoneData: {fileID: 11400000, guid: ed3c191d5e3b094438a240f16554878b, type: 2}
-  rewardCollection: {fileID: 11400000, guid: 1178b6b0193e49646a41fa0b0398abd3, type: 2}
   wheelImage: {fileID: 5500041939275137644}
   wheelIndicatorImage: {fileID: 1772211713590712788}
   spinButton: {fileID: 0}
+  safeZoneDescriptionText: {fileID: 0}
+  superZoneDescriptionText: {fileID: 0}
   normaZoneWheelSprite: {fileID: 21300000, guid: 20de886f374e6e54393baa74d224c091, type: 3}
   safeZoneWheelSprite: {fileID: 21300000, guid: b211d3921a845ee4cbfeb1cf007aaa37, type: 3}
   superZoneWheelSprite: {fileID: 21300000, guid: 0f888da9a26593f49b650af87e3e7e5e, type: 3}
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 6060813043274025712}
-  amountText: {fileID: 9092942091893461469}
+  iconImage: {fileID: 6060813043274025712}
+  valueText: {fileID: 9092942091893461469}
 --- !u!1 &4023009358123753534
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,8 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 7807693341054376367}
-  amountText: {fileID: 6829085999983443223}
+  iconImage: {fileID: 7807693341054376367}
+  valueText: {fileID: 6829085999983443223}
 --- !u!1 &4292567384012754404
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 5586530137900678109}
-  amountText: {fileID: 181722558227696309}
+  iconImage: {fileID: 5586530137900678109}
+  valueText: {fileID: 181722558227696309}
 --- !u!1 &4909666859873355459
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,8 +890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 7814495314726451972}
-  amountText: {fileID: 4714653002624636911}
+  iconImage: {fileID: 7814495314726451972}
+  valueText: {fileID: 4714653002624636911}
 --- !u!1 &5505954779157994864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,8 +1117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 896344605436064044}
-  amountText: {fileID: 3322799330519995188}
+  iconImage: {fileID: 896344605436064044}
+  valueText: {fileID: 3322799330519995188}
 --- !u!1 &6666268829760224488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 3086146987946337307}
-  amountText: {fileID: 8732407579553007336}
+  iconImage: {fileID: 3086146987946337307}
+  valueText: {fileID: 0}
 --- !u!1 &7038705187732056582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,8 +1454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 1416079398703660080}
-  amountText: {fileID: 2577952275492998242}
+  iconImage: {fileID: 1416079398703660080}
+  valueText: {fileID: 2577952275492998242}
 --- !u!1 &7545902057532625989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,5 +2086,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6215d3daf93743eb89cabf0ae1ef6ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 7570667052651449231}
-  amountText: {fileID: 2697036021523413919}
+  iconImage: {fileID: 7570667052651449231}
+  valueText: {fileID: 2697036021523413919}

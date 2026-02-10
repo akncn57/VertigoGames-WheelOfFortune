@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5867395356540024050}
   - component: {fileID: 4568026468161098973}
   m_Layer: 5
-  m_Name: Prefab_UI_InOut_Item
+  m_Name: Prefab_UI_Item_InOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f46bcb8ae34f0c9572fac6a47866d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardIcon: {fileID: 3541513795451854363}
-  amountText: {fileID: 6977968160475384055}
+  iconImage: {fileID: 3541513795451854363}
+  valueText: {fileID: 6977968160475384055}
 --- !u!1 &8831977070900491898
 GameObject:
   m_ObjectHideFlags: 0

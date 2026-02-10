@@ -1,18 +1,9 @@
-﻿using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UI.Base;
 
 namespace UI.Inventory
 {
-    public class InventoryItemUI : MonoBehaviour
+    public class InventoryItemUI : BaseItemUI
     {
-        public Image ItemImage;
-        public TMP_Text ItemValueText;
-
-        public void SetItem(Sprite sprite, int value)
-        {
-            ItemImage.sprite = sprite;
-            ItemValueText.text = value.ToString();
-        }
+        
     }
 }
